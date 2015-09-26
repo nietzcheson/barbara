@@ -1,0 +1,38 @@
+{% extends 'MoocsyBundle::moocsy-front-module.html.twig' %}
+
+{% block moocsy_items %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p class="lead">
+                {{ item.itemsForum.forum }}
+            </p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="" action="" method="post">
+                {{ form_widget(items_comments) }}
+                <button type="submit" class="btn btn-default">
+                    Comentar
+                </button>
+            </form>
+        </div>
+    </div>
+    <strong>Comentarios</strong>
+    <hr>
+    <ul class="list-group">
+
+        {% for comment in item.itemsForum.itemsComments %}
+            <li class="list-group-item">
+                <small>
+                    {{ comment.usuarios.name }} | {{ comment.created|date('d-m-Y') }}
+                </small>
+                <p>
+                    {{ comment.comment }}
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

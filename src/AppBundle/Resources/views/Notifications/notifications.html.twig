@@ -1,0 +1,51 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+    <div class="col-lg-6">
+        <ul class="list-group">
+            <li class="list-group-item">Unanswered</li>
+
+            {% if notifications_unanswered|length == 0 %}
+                <li class="list-group-item"><strong>No posts</strong></li>
+            {% else %}
+                {% for unanswered in notifications_unanswered %}
+                    <a href="{{ path('moocsy_admin_notifications_answer', {id: unanswered.id }) }}" class="list-group-item">
+                        <p>
+                            <strong>{{ unanswered.users.name }}</strong> | {{ unanswered.created|date('d-m-Y') }}
+                        </p>
+                        {{ unanswered.message }}
+                    </a>
+                {% endfor %}
+            {% endif %}
+
+
+
+        </ul>
+    </div>
+
+    <div class="col-lg-6">
+        <ul class="list-group">
+            <li class="list-group-item">Answered</li>
+
+            {% if notifications_answered|length == 0 %}
+                <li class="list-group-item"><strong>No posts</strong></li>
+            {% else %}
+                {% for answered in notifications_answered %}
+                    <a href="{{ path('moocsy_admin_notifications_answer', {id: answered.id }) }}" class="list-group-item">
+                        <p>
+                            <strong>{{ answered.users.name }}</strong> | {{ answered.created|date('d-m-Y') }}
+                        </p>
+                        {{ answered.message }}
+                    </a>
+                {% endfor %}
+            {% endif %}
+
+
+        </ul>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+<a href="{{ path('moocsy_admin_courses_new') }}" class="btn btn-default">
+    Crear curso
+</a>
+<hr>
+
+{% if courses|length == 0 %}
+    <div class="alert alert-warning"><strong>No hay cursos creados</strong></div>
+
+{% else %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Course</th>
+            <th>Created</th>
+            <th>Creator</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Course</th>
+            <th>Created</th>
+            <th>Creator</th>
+            <th></th>
+        </tr>
+    </tfoot>
+    <tbody>
+        {% for course in courses %}
+        <tr>
+            <td>
+                {{ course.course }}
+            </td>
+            <td>
+                {{ course.created|date('d-m-Y') }}
+            </td>
+            <td>
+                {{ course.creator.name|default('') }}
+            </td>
+            <td class="text-right">
+                <div class="btn-group">
+                    <a href="{{ path('moocsy_admin_course', { course: course.slug }) }}" class="btn btn-default">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+
+                    <a href="{{ path('moocsy_front_course', { course: course.slug }) }}" class="btn btn-default {% if course.modules|length < 1 %} btn-danger disabled {% endif %} ">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                    </a>
+                    <a href="{{ path('moocsy_admin_course_delete', { course: course.slug }) }}" class="btn btn-default">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% endif %}
+
+
+
+
+{% endblock %}

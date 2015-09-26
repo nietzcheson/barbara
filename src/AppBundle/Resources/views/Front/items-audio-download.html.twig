@@ -1,0 +1,16 @@
+{% extends 'MoocsyBundle::moocsy-front-module.html.twig' %}
+
+{% block moocsy_items %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a href="{{ item.itemsAudioDown.audio }}" target="_blank">
+                <div id="item-audio-down">
+                    <img src="{{ asset('bundles/moocsy/images/download-cloud.gif') }}" alt="" />
+                </div>
+            </a>
+        </div>
+    </div>
+
+    {% include 'MoocsyBundle::Front/includes/items-description.html.twig'%}
+
+{% endblock %}

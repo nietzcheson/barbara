@@ -1,0 +1,73 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="" action="" method="post">
+                    {{ form_widget(questions_form) }}
+                    <button type="submit" class="btn btn-primary">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="" action="" method="post">
+                    {{ form_widget(questions_options_form._token) }}
+                    {% macro questions_options(option) %}
+                        <tr>
+                            <td>{{ form_widget(option.options) }}</td>
+                            <td>{{ form_widget(option.value) }}</td>
+                            <td>
+                                <button type="button" class="btn btn-default delete-collection" onclick="deleteCollection(this);">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    {% endmacro %}
+
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Value</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="collections" data-prototype="{{ _self.questions_options(questions_options_form.options.vars.prototype)|e}}">
+                            {% for option in questions_options_form.options %}
+                                {{ _self.questions_options(option) }}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <div class="btn-group btn-group-sm">
+                        <button type="submit" class="btn btn-primary">
+                            Guardar
+                        </button>
+                        <button type="button" class="btn btn-default add-collection">
+                            <span class="glyphicon glyphicon-plus"></span> Agregar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block artesanus_js %}
+
+<script src="{{ asset('bundles/moocsy/js/moocsy.js') }}" charset="utf-8"></script>
+
+{% endblock %}

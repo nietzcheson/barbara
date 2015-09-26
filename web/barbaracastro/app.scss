@@ -1,0 +1,236 @@
+$azul_moocsy: #114a61;
+$naranja_moocsy: #ef552b;
+$blanco_moocsy: #ffffff;
+$gris_moocsy: #f2f2f2;
+$hover_moocsy: #78828F;
+$border_radius_moocsy : 5px;
+$active_moocsy: #585354;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: $blanco_moocsy;
+}
+
+#moocsy{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+#moocsy-side-bar{
+    height: 100%;
+    background: $naranja_moocsy;
+}
+
+#moocsy-navbar{
+    margin-top: 35%;
+    padding: 15%;
+}
+
+#moocsy-navbar .nav li a{
+    background: white;
+    border-radius: border_radius_moocsy;
+    color: $naranja_moocsy;
+    font-weight: bold;
+}
+
+#moocsy-navbar .nav .active a{
+    background: $active_moocsy;
+    color: $gris_moocsy;
+}
+
+#moocsy-navbar .nav li a:hover{
+    background: $hover_moocsy;
+    color: $gris_moocsy;
+}
+
+#moocsy-content{
+    height: 100%;
+    overflow: auto;
+    padding: 0px;
+}
+
+.navbar-brand .title{
+    color: $naranja_moocsy;
+    font-size: 30px;
+    font-weight: 200;   
+}
+
+.navbar-brand .subtitle{
+    color: $azul_moocsy;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.dropdown-toggle{
+    color: $naranja_moocsy!important;
+    font-weight: bold!important;
+}
+
+#moocsy-title-content{
+    border: 3px solid $naranja_moocsy;
+    border-radius: $border_radius_moocsy;
+    border-top: none;
+    color: $azul_moocsy;
+    font-size: 25px;
+    font-weight: 500;
+    margin: auto;
+    margin-top: 70px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+#moocsy-wrap-content{
+    min-height: 700px;
+    height: 100%;
+    padding: 5%;
+}
+
+#moocsy-wrap-content .page-header h1{
+    text-align: center;
+    font-size: 80px;
+    color: $azul_moocsy;
+}
+
+#moocsy-wrap-content .page-header .lead{
+    padding: 20px;
+    color: $azul_moocsy!important;
+}
+
+#moocsy-footer{
+    bottom: 0px;
+    border-top: 2px solid #dedede;
+    padding: 3%;
+}
+
+/*
+ Profile
+*/
+
+#moocsy-from{
+    padding: 50px;
+}
+
+#moocsy-from form input[type=text], input[type=email], input[type=password] {
+    border: 1px;
+    background: #dedede;
+    padding: 25px;
+    font-size: 20px;
+    color: #505050;
+}
+
+#moocsy-from form button[type=submit]{
+    padding: 10px 25px;
+    background: $naranja_moocsy;
+    border: none;
+    color: white;
+    font-weight: bold;   
+}
+
+/*
+Programs
+*/
+
+#programs li{
+    height: 220px;
+    width: 25%;
+    float: left;
+    position: relative;
+    padding: 15px;
+    border-radius: 100%;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#programs li img{
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+    border-radius: 100%;
+    border: 5px solid $azul_moocsy;
+}
+
+/*
+Program
+*/
+
+#warp-program:after{
+    width: 100%;
+    background: red;
+    content: "";
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+#warp-program ul li{
+    width: 32%;
+    float: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid $naranja_moocsy;
+    border-radius: $border_radius_moocsy;
+    font-weight: bold;
+    color: $azul_moocsy;
+}
+
+#warp-program ul .active{
+    background: #24CA66;
+    color: white;
+    border: none;
+}
+
+/*
+ Day
+*/
+
+.program-nav:after{
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    content: "";
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+.program-nav li{
+    width: 100%;
+    float: left;
+    position: relative;
+    background: gris_moocsy;
+    margin-top: 10px;
+    color: $naranja_moocsy;
+    font-weight: bold;
+    border-bottom: 1px solid #dedede;
+}
+
+.program-nav li .logo, .description{
+    float: left;
+    position: relative;
+    padding: 20px;
+}
+
+.program-nav li .logo{
+    width: 30%;
+}
+
+.program-nav li .description{
+    width: 70%;
+}

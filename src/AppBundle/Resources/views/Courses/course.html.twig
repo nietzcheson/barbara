@@ -1,0 +1,128 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+    <div class="col-lg-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="" action="" method="post">
+                    {{ form_widget(courses_form) }}
+                    <button type="submit" class="btn btn-default">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Modules
+                <a href="{{ path('moocsy_admin_course_modules_new', { course: course.slug }) }}" class="btn btn-default">
+                    Crear módulo
+                </a>
+            </h3>
+            </div>
+            <div class="panel-body">
+                {% if course.modules|length == 0 %}
+                    <div class="alert alert-warning">
+
+                        No hay módulos creados
+                    </div>
+                {% else %}
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for module in course.modules %}
+                            <tr>
+                                <td>
+                                    {{ module.module }}
+                                </td>
+                                <td class="text-right">
+                                    <div class="btn-group">
+                                        <a href="{{ path('moocsy_admin_course_module', {course: course.slug, module: module.slug }) }}" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-edit"></span>
+                                        </a>
+                                        <a href="{{ path('moocsy_admin_course_module_delete', {course: course.slug, module: module.slug }) }}" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Users</h3>
+            </div>
+            <div class="panel-body">
+                <form class="" action="" method="post">
+
+                    {{ form_widget(course_user_form._token) }}
+                    {% macro courses_users(option) %}
+                        <tr>
+                            <td>{{ form_widget(option.users) }}</td>
+                            <td>
+                                {{ option.vars.value.registered|default('')|date('d-m-Y') }}
+                            </td>
+                            <td class="text-right">
+                                <button type="button" class="btn btn-default delete-collection" onclick="deleteCollection(this);">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    {% endmacro %}
+
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Registrado</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="collections" data-prototype="{{ _self.courses_users(course_user_form.coursesUsers.vars.prototype)|e}}">
+                            {% for option in course_user_form.coursesUsers %}
+                                {{ _self.courses_users(option) }}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <div class="btn-group btn-group-sm">
+                        <button type="submit" class="btn btn-primary">
+                            Guardar
+                        </button>
+                        <button type="button" class="btn btn-default add-collection">
+                            <span class="glyphicon glyphicon-plus"></span> Agregar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block artesanus_js %}
+
+<script src="{{ asset('bundles/moocsy/js/moocsy.js') }}" charset="utf-8"></script>
+
+{% endblock %}

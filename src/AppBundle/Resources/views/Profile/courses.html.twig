@@ -1,0 +1,22 @@
+{% extends 'AppBundle::home-front.html.twig' %}
+
+{% block title_section %}
+
+Programas
+
+{% endblock %}
+
+{% block moocsy %}
+<h3>Tus programas</h3>
+<hr>
+<ul id="programs">
+    {% for course in courses %}
+    <li>
+        <a href="{{ path('moocsy_front_course', { course: course.courses.slug }) }}" title="{{ course.courses.course }}">
+            <img src="{{ asset('img/game.png')}} "/>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

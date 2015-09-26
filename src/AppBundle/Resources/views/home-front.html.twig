@@ -1,0 +1,41 @@
+{% extends 'AppBundle::moocsy-front.html.twig' %}
+
+{% block barbara_front %}
+
+<div class="col-lg-3" id="moocsy-side-bar">
+    <nav id="moocsy-navbar">
+        <ul class="nav nav-pills nav-stacked">
+          <li role="presentation" class="active"><a href="#">Inicio</a></li>
+          <li role="presentation"><a href="{{ path('artesanus_front_user_profile') }}">Perfil</a></li>
+          <li role="presentation"><a href="{{ path('moocsy_front_courses') }}">Programas</a></li>
+          <li role="presentation"><a href="#">Notificaciones</a></li>
+          <li role="presentation"><a href="#">Asistencia</a></li>
+          <li role="presentation"><a href="#">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="col-lg-9" id="moocsy-content">
+    {% include 'AppBundle::includes/navbar.html.twig' %}
+
+    <section>
+        <div id="moocsy-title-content">
+            {% block title_section %}{% endblock %}
+        </div>
+    </section>
+
+    <section>
+        <div id="moocsy-wrap-content">
+        {{ flashers() }}
+
+        {% block moocsy %}{% endblock %}
+        </div>
+    </section>
+    <!-- <footer id="moocsy-footer">
+        <h3>Sígueme</h3>
+        <p class="lead">
+            Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
+        </p>
+    </footer> -->
+</div>
+
+{% endblock %}
