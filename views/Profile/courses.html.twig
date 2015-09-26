@@ -1,0 +1,27 @@
+{% extends 'MoocsyBundle::moocsy-front-profile.html.twig' %}
+
+{% block moocsy_profile %}
+
+<ul class="list-group">
+    {% for course in courses %}
+        <li class="list-group-item">
+                <strong>{{ course.courses.course }}</strong>
+                <hr>
+                Registered: <small>{{ course.registered|date('d-m-Y') }}</small>
+                <hr>
+                <p class="lead">{{ course.courses.description }}</p>
+                <hr>
+                <div class="btn-group btn-group-sm">
+                  <a href="{{ path('moocsy_front_course', { course: course.courses.slug }) }}" type="button" class="btn btn-default">
+                    Ir al curso
+                    </a>
+                  <button type="button" class="btn btn-default">
+                    Descargar diploma
+                  </button>
+                </div>
+
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

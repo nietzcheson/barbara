@@ -1,0 +1,107 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="" action="" method="post">
+                    {{ form_widget(items_form) }}
+                    <button type="submit" class="btn btn-primary">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="" action="" method="post" {{ form_enctype(items_types_form) }}>
+                    {{ form_widget(items_types_form) }}
+                    <button type="submit" class="btn btn-primary">
+                        Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if item.itemsType == 'items_audio' %}
+
+        <div class="col-lg-4">
+            {% if item.itemsAudio.audio is defined %}
+                <iframe src="https://player.vimeo.com/video/{{ item.itemsAudio.audio }}" width="100%" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if item.itemsType == 'items_video' %}
+
+        <div class="col-lg-4">
+            {% if item.itemsVideo.video is defined %}
+                <iframe src="https://player.vimeo.com/video/{{ item.itemsVideo.video }}" width="100%" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+        </div>
+    {% endif %}
+
+
+    {% if item.itemsType == 'items_file' %}
+        <div class="col-lg-4">
+            {% if item.itemsFile.path is defined %}
+                <embed src="{{ asset('uploads/documents/') }}{{ item.itemsFile.path }}#toolbar=0" width="100%" height="281">
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if item.itemsType == 'items_quiz' %}
+
+        {% if item.itemsQuiz|length > 0 %}
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>Questions</strong> <a href="{{ path('moocsy_admin_course_modules_items_quiz_questions_new', { course: course.slug, module: module.slug, item: item.slug, quiz: items_entity.id }) }}" class="btn btn-default">Crear pregunta</a>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Question</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for question in item.itemsQuiz.questions %}
+                                        <tr>
+                                            <td>{{ question.question }}</td>
+                                            <td class="text-right">
+                                                <div class="btn-group">
+                                                    <a href="{{ path('moocsy_admin_course_modules_items_quiz_question', { course: course.slug, module: module.slug, item: item.slug, quiz: items_entity.id, question: question.id }) }}" class="btn btn-default">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="{{ path('moocsy_admin_course_modules_items_quiz_question_delete', { course: course.slug, module: module.slug, item: item.slug, quiz: items_entity.id, question: question.id }) }}" class="btn btn-default {% if question.options|length > 1 %}btn-danger disabled {% endif %}">
+                                                        <span class="glyphicon glyphicon-trash"></span>
+                                                    </a>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+    {% endif %}
+
+
+
+
+{% endblock %}

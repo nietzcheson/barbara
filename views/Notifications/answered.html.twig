@@ -1,0 +1,39 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+    <div class="col-lg-6">
+        <p>
+            <strong>{{ notification.users.name }}</strong> | {{ notification.created|date('d-m-Y') }}
+        </p>
+        <p class="lead">
+            {{ notification.message }}
+        </p>
+        <ul class="list-group">
+            {% for notification in notification.requestRequest %}
+
+                <li class="list-group-item">
+                    <small><strong>{{ notification.response.users.name }}</strong> | {{ notification.response.created|date('d-m-Y') }}</small>
+                    <p>
+                        {{ notification.response.message }}
+                    </p>
+                </li>
+            {% endfor %}
+            <li class="list-group-item">
+                <form class="" action="" method="post">
+                    {{ form_widget(notifications_form) }}
+                    <button type="submit" class="btn btn-default">
+                        Guardar
+                    </button>
+                </form>
+
+            </li>
+        </ul>
+
+        </p>
+    </div>
+
+{% endblock %}

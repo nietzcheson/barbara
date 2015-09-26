@@ -1,0 +1,36 @@
+{% extends 'MoocsyBundle::moocsy-front-profile.html.twig' %}
+
+{% block moocsy_profile %}
+
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form" action="" method="post" {{ form_enctype(user_form) }}>
+                {{ form_widget(user_form) }}
+                <div class="btn-group btn-group-sm">
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form" action="" method="post" >
+                {{ form_widget(user_password_form) }}
+                <div class="btn-group btn-group-sm">
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

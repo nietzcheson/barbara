@@ -1,0 +1,36 @@
+{% extends 'MoocsyBundle::moocsy-front-profile.html.twig' %}
+
+{% block moocsy_profile %}
+
+<form class="" action="" method="post">
+    {{ form_widget(notifications_form) }}
+    <button type="submit" class="btn btn-default">
+        Guardar
+    </button>
+</form>
+<hr>
+
+{% for notification in user_notifications %}
+    <ul class="list-group">
+        <li class="list-group-item">
+            <strong>Tú</strong> | {{ notification.created|date('d-m-Y') }}
+            <p class="lead">
+                {{ notification.message }}
+            </p>
+            {% for response in notification.requestRequest %}
+                <li class="list-group-item">
+                    <strong>{{ response.response.users.name }} | {{ response.response.created|date('d-m-Y') }}</strong>
+                    <p>
+                        {{ response.request.message }}
+                    </p>
+
+                </li>
+            {% endfor %}
+        </li>
+    </ul>
+
+{% endfor %}
+
+
+
+{% endblock %}

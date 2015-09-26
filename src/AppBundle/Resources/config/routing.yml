@@ -1,0 +1,2 @@
+moocsy:
+    resource: "@MoocsyBundle/Resources/config/routing.yml"

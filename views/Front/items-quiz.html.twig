@@ -1,0 +1,25 @@
+{% extends 'MoocsyBundle::moocsy-front-module.html.twig' %}
+
+{% block moocsy_items %}
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+          {% if quiz_responded != 0 %}
+            <div class="alert alert-warning">
+                Su examen ya ha sido contestado
+            </div>
+          {% else %}
+
+          <form class="" action="" method="post">
+              {{ form_widget(quiz_details_form) }}
+              <button type="submit" class="btn btn-default">
+                  Guardar
+              </button>
+          </form>
+          {% endif %}
+        </div>
+    </div>
+
+
+    {% include 'MoocsyBundle::Front/includes/items-description.html.twig'%}
+{% endblock %}

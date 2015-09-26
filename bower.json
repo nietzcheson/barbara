@@ -1,0 +1,11 @@
+{
+    "name": "ArtesanusBundle",
+    "version": "1.0.0",
+    "dependencies": {
+        "normalize-css": "*",
+        "modernizr": "*",
+        "jquery": "*",
+        "bootstrap": "*",
+        "alertifyjs": "*"
+    }
+}
