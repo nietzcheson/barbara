@@ -20,7 +20,7 @@ body{
 }
 
 body{
-  background: $blanco_moocsy;
+  background: $gris_moocsy;
 }
 
 #moocsy{
@@ -65,7 +65,7 @@ body{
 .navbar-brand .title{
     color: $naranja_moocsy;
     font-size: 30px;
-    font-weight: 200;   
+    font-weight: 200;
 }
 
 .navbar-brand .subtitle{
@@ -124,7 +124,7 @@ body{
     padding: 50px;
 }
 
-#moocsy-from form input[type=text], input[type=email], input[type=password] {
+#moocsy-from form input, input[type=text], input[type=email], input[type=password] {
     border: 1px;
     background: #dedede;
     padding: 25px;
@@ -137,7 +137,7 @@ body{
     background: $naranja_moocsy;
     border: none;
     color: white;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 /*
@@ -172,12 +172,12 @@ Program
     width: 100%;
     background: red;
     content: "";
-    display: block; 
-    height: 0; 
+    display: block;
+    height: 0;
     clear: both;
 }
 
-#warp-program ul li{
+#warp-program .list-group .list-group-item{
     width: 32%;
     float: left;
     margin-left: 1%;
@@ -190,7 +190,7 @@ Program
     color: $azul_moocsy;
 }
 
-#warp-program ul .active{
+#warp-program .list-group .active{
     background: #24CA66;
     color: white;
     border: none;
@@ -205,8 +205,8 @@ Program
     position: relative;
     padding: 20px;
     content: "";
-    display: block; 
-    height: 0; 
+    display: block;
+    height: 0;
     clear: both;
 }
 
@@ -233,4 +233,32 @@ Program
 
 .program-nav li .description{
     width: 70%;
+}
+
+#nav-item .list-group .list-group-item{
+    padding: 20px;
+    background: $gris_moocsy;
+    color: $naranja_moocsy;
+}
+
+#nav-item .list-group .active{
+    background: none!important;
+    color: #505050;
+    font-weight: bold;
+    border: 3px solid $azul_moocsy;
+    border-radius: 5px;
+}
+
+#nav-item .list-group .active:hover{
+    background: none!important;
+    color: #505050;
+    font-weight: bold;
+    border: 3px solid $azul_moocsy;
+    border-radius: 5px;
+}
+
+.btn-course{
+    background: $naranja_moocsy!important;
+    color: $gris_moocsy!important;
+    font-weight: bold;
 }

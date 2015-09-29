@@ -10,7 +10,7 @@ body {
   height: 100%; }
 
 body {
-  background: #ffffff; }
+  background: #f2f2f2; }
 
 #moocsy {
   width: 100%;
@@ -191,5 +191,29 @@ Program
 
 .program-nav li .description {
   width: 70%; }
+
+#nav-item .list-group .list-group-item {
+  padding: 20px;
+  background: #f2f2f2;
+  color: #ef552b; }
+
+#nav-item .list-group .active {
+  background: none !important;
+  color: #505050;
+  font-weight: bold;
+  border: 3px solid #114a61;
+  border-radius: 5px; }
+
+#nav-item .list-group .active:hover {
+  background: none !important;
+  color: #505050;
+  font-weight: bold;
+  border: 3px solid #114a61;
+  border-radius: 5px; }
+
+.btn-course {
+  background: #ef552b !important;
+  color: #f2f2f2 !important;
+  font-weight: bold; }
 
 /*# sourceMappingURL=app.css.map */

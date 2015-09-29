@@ -6,19 +6,19 @@
     {% include 'AppBundle::includes/navbar.html.twig' %}
 
 
-    <div class="col-lg-3">
+    <div class="col-lg-4" id="nav-item">
         <ul class="list-group">
-          <a href="{{ path('moocsy_front_course', { course: module.courses.slug }) }}" class="list-group-item active">{{ module.courses.course }}</a>
+          <a href="{{ path('moocsy_front_course', { course: module.courses.slug }) }}" class="list-group-item btn-course">{{ module.courses.course }}</a>
         </ul>
         <ul class="list-group">
 
-            {% for item in module.items %}
-                <a href="{{ path(item.aliasRouteType , { course: course.slug, module: module.slug, item: item.slug}) }}" class="list-group-item">{{ item.item }}</a>
+            {% for i in module.items %}
+                <a href="{{ path(i.aliasRouteType , { course: course.slug, module: module.slug, item: i.slug}) }}" class="list-group-item {% if item.id == i.id %} active {% endif %}">{{ i.item }} {{ i.description }}</a>
             {% endfor %}
         </ul>
     </div>
 
-    <div class="col-lg-9">
+    <div class="col-lg-8">
         {% block moocsy_items %}{% endblock %}
     </div>
 </div>
