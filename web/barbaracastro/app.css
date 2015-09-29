@@ -96,7 +96,7 @@ body {
 #moocsy-from {
   padding: 50px; }
 
-#moocsy-from form input[type=text], input[type=email], input[type=password] {
+#moocsy-from form input, input[type=text], input[type=email], input[type=password] {
   border: 1px;
   background: #dedede;
   padding: 25px;
