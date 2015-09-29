@@ -142,7 +142,7 @@ Program
   height: 0;
   clear: both; }
 
-#warp-program ul li {
+#warp-program .list-group .list-group-item {
   width: 32%;
   float: left;
   margin-left: 1%;
@@ -154,7 +154,7 @@ Program
   font-weight: bold;
   color: #114a61; }
 
-#warp-program ul .active {
+#warp-program .list-group .active {
   background: #24CA66;
   color: white;
   border: none; }

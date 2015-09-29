@@ -1,0 +1,31 @@
+{% extends 'AppBundle::moocsy-front.html.twig' %}
+
+{% block barbara_front %}
+
+<div class="col-lg-12" id="moocsy-content">
+    {% include 'AppBundle::includes/navbar.html.twig' %}
+
+
+    <div class="col-lg-3">
+        <ul class="list-group">
+          <a href="{{ path('moocsy_front_course', { course: module.courses.slug }) }}" class="list-group-item active">{{ module.courses.course }}</a>
+        </ul>
+        <ul class="list-group">
+
+            {% for item in module.items %}
+                <a href="{{ path(item.aliasRouteType , { course: course.slug, module: module.slug, item: item.slug}) }}" class="list-group-item">{{ item.item }}</a>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="col-lg-9">
+        {% block moocsy_items %}{% endblock %}
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

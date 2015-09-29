@@ -1,4 +1,4 @@
-{% extends 'AppBundle::home-front.html.twig' %}
+{% extends 'AppBundle::home-front-landscape.html.twig' %}
 
 {% block title_section %}
 
@@ -7,14 +7,6 @@
 {% endblock %}
 
 {% block moocsy %}
-
-
-
-
-<div class="page-header">
-    <h2>{{ course.courses.course }}</h2>
-    <small>{{ course.courses.description }}</small>
-</div>
 
 {% if modules_released|length == '' %}
 
@@ -26,15 +18,24 @@
 
 {% endif %}
 
-
+<div class="page-header">
+    <h1>{{ course.courses.description }}</h1>
+</div>
 
 <div id="warp-program">
-    <ul>
+    <ul class="list-group">
         {% for module in course.courses.modules %}
+
+            {% set item = module.items|first %}
+
             {% if module.id in modules_released|keys %}
-                <li class="active">{{ module.module }}</li>
+                {% if item != '' %}
+                    <a href="{{ path(item.aliasRouteType|default('') , { course: course.courses.slug, module: module.slug, item: item.slug }) }}" class="list-group-item active">{{ module.module }}</a>
+                {% else %}
+                    <a class="list-group-item active">{{ module.module }}</a>
+                {% endif %}
             {% else %}
-                <li>Día 2</li>
+                <a class="list-group-item">{{ module.module }}</a>
             {% endif %}
         {% endfor %}
     </ul>

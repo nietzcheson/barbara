@@ -99,9 +99,9 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody class="collections" data-prototype="{{ _self.courses_users(course_user_form.coursesUsers.vars.prototype)|e}}">
+                        <tbody class="collections" data-prototype="{# _self.courses_users(course_user_form.coursesUsers.vars.prototype)|e #}">
                             {% for option in course_user_form.coursesUsers %}
-                                {{ _self.courses_users(option) }}
+                                {# _self.courses_users(option) #}
                             {% endfor %}
                         </tbody>
                     </table>
