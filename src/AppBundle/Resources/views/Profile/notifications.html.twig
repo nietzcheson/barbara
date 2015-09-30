@@ -1,6 +1,17 @@
-{% extends 'MoocsyBundle::moocsy-front-profile.html.twig' %}
+{% extends 'AppBundle::home-front.html.twig' %}
 
-{% block moocsy_profile %}
+{% block title_section %}
+
+Asistencia
+
+{% endblock %}
+
+
+{% block moocsy %}
+
+<p class="lead text-center">
+    ¿En qué te podemos ayudar?
+</p>
 
 <form class="" action="" method="post">
     {{ form_widget(notifications_form) }}

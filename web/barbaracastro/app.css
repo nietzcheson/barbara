@@ -32,12 +32,11 @@ body {
   font-weight: bold; }
 
 #moocsy-navbar .nav .active a {
-  background: #585354;
+  background: #114a61;
   color: #f2f2f2; }
 
 #moocsy-navbar .nav li a:hover {
-  background: #78828F;
-  color: #f2f2f2; }
+  color: #78828F; }
 
 #moocsy-content {
   height: 100%;
@@ -101,7 +100,7 @@ body {
   background: #dedede;
   padding: 25px;
   font-size: 20px;
-  color: #505050; }
+  color: #active; }
 
 #moocsy-from form button[type=submit] {
   padding: 10px 25px;
@@ -199,14 +198,14 @@ Program
 
 #nav-item .list-group .active {
   background: none !important;
-  color: #505050;
+  color: #active;
   font-weight: bold;
   border: 3px solid #114a61;
   border-radius: 5px; }
 
 #nav-item .list-group .active:hover {
   background: none !important;
-  color: #505050;
+  color: #active;
   font-weight: bold;
   border: 3px solid #114a61;
   border-radius: 5px; }

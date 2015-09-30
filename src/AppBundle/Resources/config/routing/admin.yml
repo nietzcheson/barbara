@@ -1,0 +1,62 @@
+moocsy_admin_courses:
+    path:     /courses
+    defaults: { _controller: MoocsyBundle:Courses:index }
+
+moocsy_admin_courses_new:
+    path:     /courses/new
+    defaults: { _controller: MoocsyBundle:Courses:new }
+
+moocsy_admin_course:
+    path:     /course/{course}
+    defaults: { _controller: MoocsyBundle:Courses:edit }
+
+moocsy_admin_course_delete:
+    path:     /course/{course}/delete
+    defaults: { _controller: MoocsyBundle:Courses:delete }
+
+moocsy_admin_course_modules_new:
+    path:     /course/{course}/modules/new
+    defaults: { _controller: MoocsyBundle:Modules:new }
+
+moocsy_admin_course_module:
+    path:     /course/{course}/module/{module}
+    defaults: { _controller: MoocsyBundle:Modules:edit }
+
+moocsy_admin_course_module_delete:
+    path:     /course/{course}/module/{module}/delete
+    defaults: { _controller: MoocsyBundle:Modules:delete }
+
+moocsy_admin_course_modules_items_new:
+    path:     /course/{course}/modules/{module}/items/new
+    defaults: { _controller: MoocsyBundle:Items:new }
+
+moocsy_admin_course_module_item:
+    path:     /course/{course}/module/{module}/item/{item}
+    defaults: { _controller: MoocsyBundle:Items:edit }
+
+moocsy_admin_course_module_item_delete:
+    path:     /course/{course}/module/{module}/item/{item}/delete
+    defaults: { _controller: MoocsyBundle:Items:delete }
+
+moocsy_admin_course_modules_items_quiz_questions_new:
+    path:     /course/{course}/modules/{module}/items/{item}/quiz/{quiz}/questions/new
+    defaults: { _controller: MoocsyBundle:Questions:new }
+
+moocsy_admin_course_modules_items_quiz_question:
+    path:     /course/{course}/modules/{module}/items/{item}/quiz/{quiz}/question/{question}
+    defaults: { _controller: MoocsyBundle:Questions:question }
+
+moocsy_admin_course_modules_items_quiz_question_delete:
+    path:     /course/{course}/modules/{module}/items/{item}/quiz/{quiz}/question/{question}/delete
+    defaults: { _controller: MoocsyBundle:Questions:delete }
+
+moocsy_admin_notifications:
+    path:     /notifications
+    defaults: { _controller: MoocsyBundle:Notifications:notifications, type: notifications }
+    requirements:
+        type: notifications
+
+moocsy_admin_notifications_answer:
+    path:     /notifications/answer/{id}
+    defaults: { _controller: MoocsyBundle:Notifications:answer }
+    requirements:

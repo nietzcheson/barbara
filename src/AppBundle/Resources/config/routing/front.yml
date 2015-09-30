@@ -1,0 +1,57 @@
+moocsy_front_course:
+    path:     /courses/{course}
+    defaults: { _controller: MoocsyBundle:Courses:front }
+
+moocsy_front_items_audio:
+    path:     /courses/{course}/{module}/{item}/audio
+    defaults: { _controller: MoocsyBundle:Front:audio, type: audio }
+    requirements:
+        type: audio
+
+moocsy_front_items_audio_down:
+    path:     /courses/{course}/{module}/{item}/audio-down
+    defaults: { _controller: MoocsyBundle:Front:audioDown, type: audio_down }
+    requirements:
+        type: audio_down
+
+moocsy_front_items_forum:
+    path:     /courses/{course}/{module}/{item}/forum
+    defaults: { _controller: MoocsyBundle:Front:forum, type: forum }
+    requirements:
+        type: forum
+
+moocsy_front_items_file:
+    path:     /courses/{course}/{module}/{item}/file
+    defaults: { _controller: MoocsyBundle:Front:file, type: file }
+    requirements:
+        type: file
+
+moocsy_front_items_quiz:
+    path:     /courses/{course}/{module}/{item}/quiz
+    defaults: { _controller: MoocsyBundle:Front:quiz, type: quiz }
+    requirements:
+        type: quiz
+
+moocsy_front_items_video:
+    path:     /courses/{course}/{module}/{item}/video
+    defaults: { _controller: MoocsyBundle:Front:video, type: video }
+    requirements:
+        type: video
+
+# moocsy_front_profile:
+#     path:     /profile
+#     defaults: { _controller: MoocsyBundle:Profile:profile, type: profile }
+#     requirements:
+#         type: profile
+
+moocsy_front_courses:
+    path:     /courses
+    defaults: { _controller: MoocsyBundle:Courses:coursesProfile, type: courses }
+    requirements:
+        type: courses
+
+moocsy_front_notifications:
+    path:     /asistence
+    defaults: { _controller: MoocsyBundle:Notifications:front, type: notifications }
+    requirements:
+        type: notifications

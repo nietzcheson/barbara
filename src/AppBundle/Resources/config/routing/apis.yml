@@ -1,0 +1,9 @@
+moocsy_apis_xml_server:
+    path:     /xml
+    defaults: { _controller: MoocsyBundle:APIXML:server, type: xml }
+    requirements:
+        type: xml
+
+moocsy_apis_xml_client:
+    path:     /xml/client
+    defaults: { _controller: MoocsyBundle:APIXML:client}

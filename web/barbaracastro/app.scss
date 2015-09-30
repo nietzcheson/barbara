@@ -47,13 +47,13 @@ body{
 }
 
 #moocsy-navbar .nav .active a{
-    background: $active_moocsy;
+    background: $azul_moocsy;
     color: $gris_moocsy;
 }
 
 #moocsy-navbar .nav li a:hover{
-    background: $hover_moocsy;
-    color: $gris_moocsy;
+    //background: $hover_moocsy;
+    color: $hover_moocsy;
 }
 
 #moocsy-content{
@@ -129,7 +129,7 @@ body{
     background: #dedede;
     padding: 25px;
     font-size: 20px;
-    color: #505050;
+    color: #active;
 }
 
 #moocsy-from form button[type=submit]{
@@ -243,7 +243,7 @@ Program
 
 #nav-item .list-group .active{
     background: none!important;
-    color: #505050;
+    color: #active;
     font-weight: bold;
     border: 3px solid $azul_moocsy;
     border-radius: 5px;
@@ -251,7 +251,7 @@ Program
 
 #nav-item .list-group .active:hover{
     background: none!important;
-    color: #505050;
+    color: #active;
     font-weight: bold;
     border: 3px solid $azul_moocsy;
     border-radius: 5px;
