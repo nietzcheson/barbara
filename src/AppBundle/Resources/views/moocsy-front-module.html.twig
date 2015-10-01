@@ -13,7 +13,9 @@
         <ul class="list-group">
 
             {% for i in module.items %}
-                <a href="{{ path(i.aliasRouteType , { course: course.slug, module: module.slug, item: i.slug}) }}" class="list-group-item {% if item.id == i.id %} active {% endif %}">{{ i.item }} {{ i.description }}</a>
+                <a href="{{ path(i.aliasRouteType , { course: course.slug, module: module.slug, item: i.slug}) }}" class="list-group-item {% if item.id == i.id %} active {% endif %}">
+                    <img src="{{ asset('img/') }}{{ i.itemsType }}.png" alt="" />     {{ i.item }} {{ i.description }}
+                </a>
             {% endfor %}
         </ul>
     </div>

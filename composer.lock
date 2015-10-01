@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c77a8991d196b0fed07ed80f2340cec2",
-    "content-hash": "1c00cfc99edbd05d248bd81a14b72b82",
+    "hash": "8fd633d2dd468fff22bb6d1537866241",
+    "content-hash": "d4a57968e54b8950b9b03f574694e37c",
     "packages": [
         {
             "name": "artesan-io/artesanus-bundle",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/MoocsyBundle.git",
-                "reference": "dc20f81d6a308c641bbcb77e57aa0ed17febc8a5"
+                "reference": "cab3465dd9c53c1d22453623b0509b89ef394558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/dc20f81d6a308c641bbcb77e57aa0ed17febc8a5",
-                "reference": "dc20f81d6a308c641bbcb77e57aa0ed17febc8a5",
+                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/cab3465dd9c53c1d22453623b0509b89ef394558",
+                "reference": "cab3465dd9c53c1d22453623b0509b89ef394558",
                 "shasum": ""
             },
             "require": {
@@ -96,7 +96,7 @@
                 "Mooc",
                 "artesanIO"
             ],
-            "time": "2015-09-26 21:54:12"
+            "time": "2015-09-30 22:08:40"
         },
         {
             "name": "doctrine/annotations",
@@ -452,12 +452,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "53bc23173fb82bcc08c0c8aae66f8122d08a1866"
+                "reference": "5674222e181c9236abdabed19fc660f35619d82c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/53bc23173fb82bcc08c0c8aae66f8122d08a1866",
-                "reference": "53bc23173fb82bcc08c0c8aae66f8122d08a1866",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/5674222e181c9236abdabed19fc660f35619d82c",
+                "reference": "5674222e181c9236abdabed19fc660f35619d82c",
                 "shasum": ""
             },
             "require": {
@@ -522,7 +522,7 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2015-09-28 15:16:30"
+            "time": "2015-09-30 14:52:15"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
@@ -788,12 +788,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "b055d78ea19835fab563dfc234d4804a9d04966a"
+                "reference": "61ad1bd137bea574dbcfe1ab5ae9e09c02daddd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/b055d78ea19835fab563dfc234d4804a9d04966a",
-                "reference": "b055d78ea19835fab563dfc234d4804a9d04966a",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/61ad1bd137bea574dbcfe1ab5ae9e09c02daddd6",
+                "reference": "61ad1bd137bea574dbcfe1ab5ae9e09c02daddd6",
                 "shasum": ""
             },
             "require": {
@@ -857,7 +857,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-09-19 08:39:39"
+            "time": "2015-09-30 10:12:43"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -1636,16 +1636,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "dev-master",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "a6494a97c0daac540e7c04b67832c56d68a644ed"
+                "reference": "78883d8c1cfa523ac3a28a482b7793036b243f7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/a6494a97c0daac540e7c04b67832c56d68a644ed",
-                "reference": "a6494a97c0daac540e7c04b67832c56d68a644ed",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/78883d8c1cfa523ac3a28a482b7793036b243f7d",
+                "reference": "78883d8c1cfa523ac3a28a482b7793036b243f7d",
                 "shasum": ""
             },
             "require": {
@@ -1663,7 +1663,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7.x-dev"
+                    "dev-master": "2.8.x-dev"
                 }
             },
             "autoload": {
@@ -1691,7 +1691,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2015-09-25 10:42:33"
+            "time": "2015-09-29 17:13:11"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -1699,12 +1699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "c7c15cab65f2c36090e9a1533adcefe1381bc6f6"
+                "reference": "6febf558532ee6f25edd2699f74072c56def3f4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/c7c15cab65f2c36090e9a1533adcefe1381bc6f6",
-                "reference": "c7c15cab65f2c36090e9a1533adcefe1381bc6f6",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/6febf558532ee6f25edd2699f74072c56def3f4a",
+                "reference": "6febf558532ee6f25edd2699f74072c56def3f4a",
                 "shasum": ""
             },
             "require": {
@@ -1748,30 +1748,29 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2015-09-28 14:45:50"
+            "time": "2015-09-30 17:01:01"
         },
         {
             "name": "symfony/symfony",
-            "version": "2.7.x-dev",
+            "version": "2.6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "03a63dbc14761c4774d93f4cc220372409cee4dd"
+                "reference": "c6ab380a577e7bfb8db6e6f3105f470f97c83235"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/03a63dbc14761c4774d93f4cc220372409cee4dd",
-                "reference": "03a63dbc14761c4774d93f4cc220372409cee4dd",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/c6ab380a577e7bfb8db6e6f3105f470f97c83235",
+                "reference": "c6ab380a577e7bfb8db6e6f3105f470f97c83235",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": "~2.4",
-                "php": ">=5.3.9",
+                "doctrine/common": "~2.3",
+                "php": ">=5.3.3",
                 "psr/log": "~1.0",
-                "twig/twig": "~1.20|~2.0"
+                "twig/twig": "~1.12,>=1.12.3"
             },
             "replace": {
-                "symfony/asset": "self.version",
                 "symfony/browser-kit": "self.version",
                 "symfony/class-loader": "self.version",
                 "symfony/config": "self.version",
@@ -1795,6 +1794,7 @@
                 "symfony/monolog-bridge": "self.version",
                 "symfony/options-resolver": "self.version",
                 "symfony/process": "self.version",
+                "symfony/propel1-bridge": "self.version",
                 "symfony/property-access": "self.version",
                 "symfony/proxy-manager-bridge": "self.version",
                 "symfony/routing": "self.version",
@@ -1818,30 +1818,25 @@
             },
             "require-dev": {
                 "doctrine/data-fixtures": "1.0.*",
-                "doctrine/dbal": "~2.4",
+                "doctrine/dbal": "~2.2",
                 "doctrine/doctrine-bundle": "~1.2",
-                "doctrine/orm": "~2.4,>=2.4.5",
+                "doctrine/orm": "~2.2,>=2.2.3",
                 "egulias/email-validator": "~1.2",
                 "ircmaxell/password-compat": "~1.0",
                 "monolog/monolog": "~1.11",
                 "ocramius/proxy-manager": "~0.4|~1.0",
-                "symfony/phpunit-bridge": "self.version"
+                "propel/propel1": "~1.6",
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\Doctrine\\": "src/Symfony/Bridge/Doctrine/",
-                    "Symfony\\Bridge\\Monolog\\": "src/Symfony/Bridge/Monolog/",
-                    "Symfony\\Bridge\\ProxyManager\\": "src/Symfony/Bridge/ProxyManager/",
-                    "Symfony\\Bridge\\Swiftmailer\\": "src/Symfony/Bridge/Swiftmailer/",
-                    "Symfony\\Bridge\\Twig\\": "src/Symfony/Bridge/Twig/",
-                    "Symfony\\Bundle\\": "src/Symfony/Bundle/",
-                    "Symfony\\Component\\": "src/Symfony/Component/"
+                "psr-0": {
+                    "Symfony\\": "src/"
                 },
                 "classmap": [
                     "src/Symfony/Component/HttpFoundation/Resources/stubs",
@@ -1870,24 +1865,24 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-09-28 12:41:55"
+            "time": "2015-07-26 10:44:22"
         },
         {
             "name": "twig/twig",
-            "version": "dev-master",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "de874a9decb305e790dd6dcd7c696afb9a701b41"
+                "reference": "d6740f36827f88a7ecda923f71ce0bb28525a9b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/de874a9decb305e790dd6dcd7c696afb9a701b41",
-                "reference": "de874a9decb305e790dd6dcd7c696afb9a701b41",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d6740f36827f88a7ecda923f71ce0bb28525a9b1",
+                "reference": "d6740f36827f88a7ecda923f71ce0bb28525a9b1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": ">=5.2.7"
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
@@ -1896,7 +1891,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "1.22-dev"
                 }
             },
             "autoload": {
@@ -1931,7 +1926,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-09-24 14:40:33"
+            "time": "2015-09-30 12:05:09"
         }
     ],
     "packages-dev": [

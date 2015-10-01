@@ -18,8 +18,14 @@
 
 {% endif %}
 
+<p class="lead text-center">
+    {{ course.courses.header }}
+</p>
 <div class="page-header">
-    <h1>{{ course.courses.description }}</h1>
+    <h1>{{ course.courses.title }}</h1>
+    <p class="lead">
+        {{ course.courses.description }}
+    </p>
 </div>
 
 <div id="warp-program">
