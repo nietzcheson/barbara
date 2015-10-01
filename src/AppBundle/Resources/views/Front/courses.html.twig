@@ -21,6 +21,23 @@
 <p class="lead text-center">
     {{ course.courses.header }}
 </p>
+
+<div class="col-lg-1-12 text-center">
+    <div id="warp-program">
+        {% if course.courses.attachments|length != 0 %}
+        <ul class="list-group">
+            {% for attachment in course.courses.attachments %}
+                <a href="{{ asset('uploads/courses/attachments/') }}{{ attachment.path }}" class="list-group-item" target="_blank">{{ attachment.attachment }}</a>
+            {% endfor %}
+                <a href="#" class="list-group-item" target="_blank">Diploma</a>
+        </ul>
+        {% endif %}
+
+    </div>
+</div>
+
+
+
 <div class="page-header">
     <h1>{{ course.courses.title }}</h1>
     <p class="lead">
