@@ -23,15 +23,18 @@
 </p>
 
 <div class="col-lg-1-12 text-center">
-    <div id="warp-program">
-        {% if course.courses.attachments|length != 0 %}
-        <ul class="list-group">
-            {% for attachment in course.courses.attachments %}
-                <a href="{{ asset('uploads/courses/attachments/') }}{{ attachment.path }}" class="list-group-item" target="_blank">{{ attachment.attachment }}</a>
-            {% endfor %}
-                <a href="#" class="list-group-item" target="_blank">Diploma</a>
-        </ul>
-        {% endif %}
+    <div id="attachments">
+        <div class="attachments">
+            {% if course.courses.attachments|length != 0 %}
+            <ul class="list-group">
+                {% for attachment in course.courses.attachments %}
+                    <a href="{{ asset('uploads/courses/attachments/') }}{{ attachment.path }}" class="list-group-item" target="_blank">{{ attachment.attachment }}</a>
+                {% endfor %}
+                    <a href="#" class="list-group-item disabled" target="_blank">Diploma</a>
+            </ul>
+            {% endif %}
+        </div>
+
 
     </div>
 </div>
