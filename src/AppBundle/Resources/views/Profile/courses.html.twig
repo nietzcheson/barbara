@@ -13,7 +13,7 @@ Programas
     {% for course in courses %}
     <li>
         <a href="{{ path('moocsy_front_course', { course: course.courses.slug }) }}" title="{{ course.courses.course }}">
-            <img src="{{ asset('img/game.png')}} "/>
+            <img src="{{ asset('uploads/courses/covers/')}}{{ course.courses.coursesCovers.path|default() }}"/>
         </a>
     </li>
     {% endfor %}
