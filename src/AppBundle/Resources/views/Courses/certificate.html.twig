@@ -1,0 +1,60 @@
+<style>
+    body{
+    }
+    #wrap{
+        width: 100%;
+    }
+    #wrap{
+        width: 1032px;
+        height: 702px;
+        float: left;
+        position: absolute;
+        background-image: url("{{ app.request.getSchemeAndHttpHost() }}{{ asset('uploads/courses/certificades/diploma.png') }}");
+    }
+    #nombre{
+        width: 100%;
+        float: left;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        top: 190px;
+        font-family: Helvetica;
+        font-size: 30px;
+    }
+    #curso{
+        width: 100%;
+        float: left;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        top: 325px;
+        font-family: Helvetica;
+        font-size: 20px;
+    }
+    #fecha{
+        width: 100%;
+        float: left;
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        top: 550px;
+        font-family: Helvetica;
+        font-size: 16px;
+    }
+</style>
+
+
+<div id="wrap">
+    <div id="nombre">
+        <h1>{{ nombre }}</h1>
+    </div>
+
+    <div id="curso">
+        <h3>{{ curso }}</h3>
+    </div>
+
+    <div id="fecha">
+        <h4>{{ fecha|date('d-m-Y') }}</h4>
+    </div>
+
+</div>

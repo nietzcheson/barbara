@@ -57,5 +57,5 @@ moocsy_front_notifications:
         type: notifications
 
 app_certificate_download:
-    path:     /certificate-download
+    path:     /certificate-download/{course}
     defaults: { _controller: MoocsyBundle:Courses:certificateDownload }

@@ -160,8 +160,26 @@ class CoursesController extends Controller
         ));
     }
 
-    public function certificateDownloadAction()
+    public function certificateDownloadAction($course)
     {
-        return "Bajando el cerficicado";
+        $coursesManager = $this->get('moocsy.courses_manager');
+        $course = $coursesManager->findOneBySlug($course);
+
+        $courseUser = $coursesManager->findCourseUser($course, $this->getUser());
+
+        require_once($this->get('kernel')->getRootDir().'/config/dompdf_config.inc.php');
+
+        $html = $this->renderView('AppBundle::Courses/certificate.html.twig', array(
+            'nombre' => $courseUser->getUsernameCertificate(),
+            'fecha'  => $courseUser->getCertified(),
+            'curso'  => $courseUser->getCourses()->getCourse()
+        ));
+
+        //return $html;
+        $dompdf = new \DOMPDF();
+        $dompdf->set_paper('a4', 'landscape');
+        $dompdf->load_html($html);
+        $dompdf->render();
+        $dompdf->stream($courseUser->getCourses()->getCourse().".pdf");
     }
 }
