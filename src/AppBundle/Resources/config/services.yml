@@ -1,0 +1,10 @@
+services:
+    moocsy.api_xml:
+        class: ArtesanIO\MoocsyBundle\Utils\APIxml
+        arguments:
+            - @doctrine.orm.entity_manager
+            - @artesanus.user_manager
+            - @artesanus.cartero
+            - @twig
+            - @moocsy.courses_manager
+            - @moocsy.courses_users_manager

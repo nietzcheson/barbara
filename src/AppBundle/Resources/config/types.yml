@@ -1,0 +1,5 @@
+services:
+    barbara.username_certificate_type:
+        class: AppBundle\Form\UsernameCertificateType
+        tags:
+            - { name: form.type, alias: barbara_username_certificate_type }

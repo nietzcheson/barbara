@@ -55,3 +55,7 @@ moocsy_front_notifications:
     defaults: { _controller: MoocsyBundle:Notifications:front, type: notifications }
     requirements:
         type: notifications
+
+app_certificate_download:
+    path:     /certificate-download
+    defaults: { _controller: MoocsyBundle:Courses:certificateDownload }
