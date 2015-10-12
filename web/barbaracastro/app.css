@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +11,8 @@ body {
   height: 100%; }
 
 body {
-  background: #f2f2f2; }
+  background: #ffffff;
+  font-family: 'Titillium Web', sans-serif; }
 
 #moocsy {
   width: 100%;
@@ -243,5 +245,19 @@ Program
   background: #ef552b !important;
   color: #f2f2f2 !important;
   font-weight: bold; }
+
+.img-profile {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 100%;
+  border: 3px solid #ef552b; }
+
+.img-profile-navbar {
+  max-width: 50px;
+  max-height: 50px;
+  margin-top: -15px;
+  padding: 2px;
+  border: 1px solid #ef552b; }
 
 /*# sourceMappingURL=app.css.map */

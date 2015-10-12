@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
 $azul_moocsy: #114a61;
 $naranja_moocsy: #ef552b;
 $blanco_moocsy: #ffffff;
@@ -20,7 +22,8 @@ body{
 }
 
 body{
-  background: $gris_moocsy;
+  background: $blanco_moocsy;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #moocsy{
@@ -296,4 +299,20 @@ Program
     background: $naranja_moocsy!important;
     color: $gris_moocsy!important;
     font-weight: bold;
+}
+
+.img-profile{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 100%;
+    border: 3px solid $naranja_moocsy;
+}
+
+.img-profile-navbar{
+    max-width:50px;
+    max-height:50px;
+    margin-top: -15px;
+    padding: 2px;
+    border: 1px solid $naranja_moocsy;
 }

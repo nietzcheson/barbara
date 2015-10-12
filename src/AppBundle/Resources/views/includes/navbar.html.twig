@@ -16,8 +16,12 @@
 
       <ul class="nav navbar-nav navbar-right">
           <li><a href="{{ path('moocsy_admin_courses') }}">Admin</a></li>
+            <a class="navbar-brand" rel="home" href="" title="">
+                {% include 'AppBundle::includes/img-profile.html.twig' %}
+            </a>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cristian Angulo Nova <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              {% if app.user.name == "" %} {{ app.user.username }} {% else %} {{ app.user.name }} {% endif %}<span class="caret"></span></a>
           <ul class="dropdown-menu">
             {% include 'AppBundle::includes/navbar-li.html.twig' %}
           </ul>

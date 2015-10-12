@@ -51,7 +51,7 @@
                     <a href="{{ asset('uploads/courses/attachments/') }}{{ attachment.path }}" class="list-group-item" target="_blank">{{ attachment.attachment }}</a>
                 {% endfor %}
 
-                    {% if course.certificateFreedom|date('d-m-Y') >= 'now'|date('d-m-Y') %}
+                    {% if 'now'|date('d-m-Y') >= course.certificateFreedom|date('d-m-Y') %}
                         {% if (course.certificateFreedom is null) or (course.usernameCertificate is null)%}
                             <a href="" class="list-group-item active" target="_blank" data-toggle="modal" data-target="#myModal">Diploma <span class="glyphicon glyphicon-pencil"></span></a>
                         {% else %}

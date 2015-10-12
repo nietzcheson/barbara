@@ -10,7 +10,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.9",
-        "symfony/symfony": "2.6.*",
+        "symfony/symfony": "2.7.*",
         "doctrine/orm": "~2.2,>=2.2.3,<2.5",
         "doctrine/dbal": "<2.5",
         "doctrine/doctrine-bundle": "~1.4",
@@ -22,7 +22,9 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "artesan-io/moocsy-bundle": "dev-master",
         "dompdf/dompdf" : "0.6.*",
-        "magephp/magallanes": "dev-master"
+        "magephp/magallanes": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "^2.2@dev",
+        "hautelook/alice-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

@@ -3,3 +3,8 @@ services:
         class: AppBundle\Form\UsernameCertificateType
         tags:
             - { name: form.type, alias: barbara_username_certificate_type }
+
+    barbara.quiz_details_user_type:
+        class: AppBundle\Form\QuizDetailsUserType
+        tags:
+            - { name: form.type, alias: barbara_quiz_details_user_type }
