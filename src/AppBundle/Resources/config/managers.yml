@@ -1,0 +1,9 @@
+services:
+    barbara.quiz_details_manager:
+        class: AppBundle\Model\QuizDetailsUserManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - AppBundle\Entity\QuizDetailsUser
+            - @artesanus.user_manager
+        calls:
+            - [setSecurity, ['@security.context']]

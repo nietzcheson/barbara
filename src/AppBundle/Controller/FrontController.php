@@ -163,12 +163,12 @@ class FrontController extends Controller
         $module = $item->getModules();
         $course = $module->getCourses();
 
-        $quizDetailsUserManager = $this->get('moocsy.quiz_details_manager');
+        $quizDetailsUserManager = $this->get('barbara.quiz_details_manager');
         $quizDetails = $quizDetailsUserManager->create();
 
-        $questions = $quizDetailsUserManager->getQuestion($item);
-
-        $quizResponded = $quizDetailsUserManager->quizResponded($item);
+        // $questions = $quizDetailsUserManager->getQuestion($item);
+        //
+        // $quizResponded = $quizDetailsUserManager->quizResponded($item);
 
         $questionLabel = '';
         $questionId = 0;
@@ -184,9 +184,9 @@ class FrontController extends Controller
 
             $formData = $quizDetailsForm->getData();
 
-            $quizDetails->setQuestions($questions);
+            //$quizDetails->setQuestions($questions);
 
-            $quizDetails->setValue($formData->getOptions()->getValue());
+            //$quizDetails->setValue($formData->getOptions()->getValue());
 
             $quizDetailsUserManager->save($quizDetails);
 
@@ -203,7 +203,7 @@ class FrontController extends Controller
             'module'            => $module,
             'item'              => $item,
             'quiz_details_form' => $quizDetailsForm->createView(),
-            'quiz_responded'    => $quizResponded
+            'quiz_responded'    => 0
         ));
     }
 

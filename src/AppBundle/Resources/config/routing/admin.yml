@@ -10,6 +10,10 @@ moocsy_admin_course:
     path:     /course/{course}
     defaults: { _controller: MoocsyBundle:Courses:edit }
 
+moocsy_admin_course_user:
+    path:     /course/{course}/user/{user}
+    defaults: { _controller: MoocsyBundle:Courses:user }
+
 moocsy_admin_course_delete:
     path:     /course/{course}/delete
     defaults: { _controller: MoocsyBundle:Courses:delete }

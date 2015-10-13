@@ -18,7 +18,7 @@ class QuizDetailsUserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('value')
+            ->add('value', 'textarea')
             // ->add('options', 'entity', array(
             //     'class' => 'MoocsyBundle:Options',
             //     'query_builder' => function(EntityRepository $er) use($options){
@@ -52,14 +52,6 @@ class QuizDetailsUserType extends AbstractType
         ]);
     }
 
-    public function getParent()
-    {
-        return "moocsy_quiz_details_user_type";
-    }
-
-    /**
-     * @return string
-     */
     public function getName()
     {
         return 'barbara_quiz_details_user_type';
