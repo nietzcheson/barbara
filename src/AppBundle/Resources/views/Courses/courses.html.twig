@@ -48,11 +48,13 @@
                     <a href="{{ path('moocsy_admin_course', { course: course.slug }) }}" class="btn btn-default">
                         <span class="glyphicon glyphicon-edit"></span>
                     </a>
-
+                    <a href="{{ path('moocsy_front_course_copy', { course: course.slug }) }}" class="btn btn-default">
+                        <span class="glyphicon glyphicon-copy"></span>
+                    </a>
                     <a href="{{ path('moocsy_front_course', { course: course.slug }) }}" class="btn btn-default {% if course.modules|length < 1 %} btn-danger disabled {% endif %} ">
                         <span class="glyphicon glyphicon-th-list"></span>
                     </a>
-                    <a href="{{ path('moocsy_admin_course_delete', { course: course.slug }) }}" class="btn btn-default">
+                    <a href="{{ path('moocsy_admin_course_delete', { course: course.slug }) }}" class="btn btn-default btn-delete {% if course.coursesUsers|length > 0 %} disabled {% endif %}">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
                 </div>

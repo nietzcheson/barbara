@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/MoocsyBundle.git",
-                "reference": "4cc537c404626d596853cd0c43179d9125e0977e"
+                "reference": "701a43984b95dc5133f25fc49375aa43d8963591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/4cc537c404626d596853cd0c43179d9125e0977e",
-                "reference": "4cc537c404626d596853cd0c43179d9125e0977e",
+                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/701a43984b95dc5133f25fc49375aa43d8963591",
+                "reference": "701a43984b95dc5133f25fc49375aa43d8963591",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "Mooc",
                 "artesanIO"
             ],
-            "time": "2015-10-12 21:35:31"
+            "time": "2015-10-14 20:22:44"
         },
         {
             "name": "doctrine/annotations",
@@ -1122,12 +1122,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "5c3fa245495903957df6737347cce04d0919a781"
+                "reference": "9198c2f7668b9ee494959f8ff7f5f6e6f65379ca"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/9198c2f7668b9ee494959f8ff7f5f6e6f65379ca",
-                "reference": "5c3fa245495903957df6737347cce04d0919a781",
+                "reference": "9198c2f7668b9ee494959f8ff7f5f6e6f65379ca",
                 "shasum": ""
             },
             "require": {
@@ -1164,7 +1164,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-10-06 08:17:03"
+            "time": "2015-10-12 15:48:46"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1965,16 +1965,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.17.1",
+            "version": "1.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422"
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/0524c87587ab85bc4c2d6f5b41253ccb930a5422",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
                 "shasum": ""
             },
             "require": {
@@ -1988,10 +1988,11 @@
                 "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-console/php-console": "^3.1.3",
                 "phpunit/phpunit": "~4.5",
                 "phpunit/phpunit-mock-objects": "2.3.0",
-                "raven/raven": "~0.11",
+                "raven/raven": "^0.13",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
@@ -2037,7 +2038,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-08-31 09:17:37"
+            "time": "2015-10-14 12:51:02"
         },
         {
             "name": "nelmio/alice",
@@ -3216,12 +3217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "a954fea00efdd18dcec543a92c9ca2c351832ca3"
+                "reference": "7e848fba8458347bd09132d36f45616d6dae2262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/c6da10674a5fc9d53b789ddc7b08119f1eb1b883",
-                "reference": "a954fea00efdd18dcec543a92c9ca2c351832ca3",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7e848fba8458347bd09132d36f45616d6dae2262",
+                "reference": "7e848fba8458347bd09132d36f45616d6dae2262",
                 "shasum": ""
             },
             "require": {
@@ -3284,8 +3285,7 @@
                 "egulias/email-validator": "~1.2",
                 "ircmaxell/password-compat": "~1.0",
                 "monolog/monolog": "~1.11",
-                "ocramius/proxy-manager": "~0.4|~1.0",
-                "symfony/phpunit-bridge": "self.version"
+                "ocramius/proxy-manager": "~0.4|~1.0"
             },
             "type": "library",
             "extra": {
@@ -3330,7 +3330,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-10-07 12:25:40"
+            "time": "2015-10-13 16:05:47"
         },
         {
             "name": "twig/twig",
@@ -3338,12 +3338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "ce074e5c0cea010f7b138e793ea3c37358c73053"
+                "reference": "112c5112609ff74df6e6a1a7375efc30f442c0db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ce074e5c0cea010f7b138e793ea3c37358c73053",
-                "reference": "ce074e5c0cea010f7b138e793ea3c37358c73053",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/112c5112609ff74df6e6a1a7375efc30f442c0db",
+                "reference": "112c5112609ff74df6e6a1a7375efc30f442c0db",
                 "shasum": ""
             },
             "require": {
@@ -3391,7 +3391,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-10-04 08:43:21"
+            "time": "2015-10-13 07:18:23"
         }
     ],
     "packages-dev": [

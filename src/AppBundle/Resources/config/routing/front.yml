@@ -2,6 +2,10 @@ moocsy_front_course:
     path:     /courses/{course}
     defaults: { _controller: MoocsyBundle:Courses:front }
 
+moocsy_front_course_copy:
+    path:     /courses/copy/{course}
+    defaults: { _controller: MoocsyBundle:Courses:copy }
+
 moocsy_front_items_audio:
     path:     /courses/{course}/{module}/{item}/audio
     defaults: { _controller: MoocsyBundle:Front:audio, type: audio }
@@ -51,11 +55,7 @@ moocsy_front_courses:
         type: courses
 
 moocsy_front_notifications:
-    path:     /asistence
+    path:     /notifications
     defaults: { _controller: MoocsyBundle:Notifications:front, type: notifications }
     requirements:
         type: notifications
-
-app_certificate_download:
-    path:     /certificate-download/{course}
-    defaults: { _controller: MoocsyBundle:Courses:certificateDownload }
