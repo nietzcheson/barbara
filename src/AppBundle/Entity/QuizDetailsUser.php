@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * QuizDetailsUser
  *
  * @ORM\Table(name="barbara_moocsy_quiz_details")
- * @ORM\Entity(repositoryClass="ArtesanIO\MoocsyBundle\Entity\QuizDetailsUserRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\QuizDetailsUserRepository")
  */
 class QuizDetailsUser
 {
@@ -20,6 +20,12 @@ class QuizDetailsUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="ArtesanIO\MoocsyBundle\Entity\ItemsQuiz", inversedBy="quizDetailsUser")
+    * @ORM\JoinColumn(name="quiz_id", referencedColumnName="id")
+    */
+    private $quizs;
 
     /**
     * @ORM\ManyToOne(targetEntity="ArtesanIO\MoocsyBundle\Entity\Questions", inversedBy="quizDetailsUser")
@@ -36,7 +42,7 @@ class QuizDetailsUser
     /**
      * @var string
      *
-     * @ORM\Column(name="value", type="string")
+     * @ORM\Column(name="value", type="text")
      */
     private $value;
 
@@ -169,5 +175,28 @@ class QuizDetailsUser
     public function getUsers()
     {
         return $this->users;
+    }
+
+    /**
+     * Set quizs
+     *
+     * @param \ArtesanIO\MoocsyBundle\Entity\ItemsQuiz $quizs
+     * @return QuizDetailsUser
+     */
+    public function setQuizs(\ArtesanIO\MoocsyBundle\Entity\ItemsQuiz $quizs = null)
+    {
+        $this->quizs = $quizs;
+
+        return $this;
+    }
+
+    /**
+     * Get quizs
+     *
+     * @return \ArtesanIO\MoocsyBundle\Entity\ItemsQuiz
+     */
+    public function getQuizs()
+    {
+        return $this->quizs;
     }
 }

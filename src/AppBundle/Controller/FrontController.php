@@ -166,28 +166,28 @@ class FrontController extends Controller
         $quizDetailsUserManager = $this->get('barbara.quiz_details_manager');
         $quizDetails = $quizDetailsUserManager->create();
 
-        // $questions = $quizDetailsUserManager->getQuestion($item);
-        //
-        // $quizResponded = $quizDetailsUserManager->quizResponded($item);
+        $quizUser = $quizDetailsUserManager->findQuizUser($item, $this->getUser());
+
+        $quizQuestions = $quizDetailsUserManager->quizQuestions($item, $quizUser);
 
         $questionLabel = '';
         $questionId = 0;
 
-        if($questions != null){
-            $questionLabel = $questions->getQuestion();
-            $questionId    = $questions->getId();
+        $labelQuestion = '';
+
+        if($quizQuestions != null){
+            $labelQuestion = $quizQuestions->getQuestion();
         }
 
-        $quizDetailsForm = $this->createForm('barbara_quiz_details_user_type', $quizDetails, ['question_label' => $questionLabel, 'question_id' => $questionId])->handleRequest($request);
+        $quizDetailsForm = $this->createForm('barbara_quiz_details_user_type', $quizDetails, ['question_label' => $labelQuestion])->handleRequest($request);
 
         if($quizDetailsForm->isValid()){
 
             $formData = $quizDetailsForm->getData();
 
-            //$quizDetails->setQuestions($questions);
-
-            //$quizDetails->setValue($formData->getOptions()->getValue());
-
+            $quizDetails->setUsers($this->getUser());
+            $quizDetails->setQuizs($item->getItemsQuiz());
+            $quizDetails->setQuestions($quizQuestions);
             $quizDetailsUserManager->save($quizDetails);
 
             return $this->redirect($this->generateUrl('moocsy_front_items_quiz', array(
@@ -203,7 +203,8 @@ class FrontController extends Controller
             'module'            => $module,
             'item'              => $item,
             'quiz_details_form' => $quizDetailsForm->createView(),
-            'quiz_responded'    => 0
+            'quiz_question'     => $quizQuestions,
+            'quiz_user'         => $quizUser
         ));
     }
 

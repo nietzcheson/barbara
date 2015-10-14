@@ -4,10 +4,20 @@
     <div class="panel panel-default">
       <div class="panel-body">
 
-          {% if quiz_responded != 0 %}
+          {% if quiz_question is null %}
             <div class="alert alert-warning">
-                Su examen ya ha sido contestado
+                Examen contestado
             </div>
+
+            <ul class="list-group">
+                {% for question in quiz_user %}
+                    <li class="list-group-item">
+                        <strong>{{ question.questions.question }}</strong>
+                        <p class="lead">
+                            {{ question.value }}
+                        </p> </li>
+                {% endfor %}
+            </ul>
           {% else %}
 
           <form class="" action="" method="post">

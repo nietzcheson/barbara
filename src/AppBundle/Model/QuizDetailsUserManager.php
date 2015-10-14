@@ -147,6 +147,43 @@ class QuizDetailsUserManager extends ContainerAware
         return false;
     }
 
+    public function findQuizUser($item, $user)
+    {
+        return $this->repository->findQuizUser($item->getItemsQuiz()->getId(), $user->getId());
+    }
+
+    public function quizQuestions($item, $quizUser)
+    {
+        $questionsAnswered = [];
+
+        foreach($quizUser as $question){
+            $questionsAnswered[$question->getQuestions()->getId()] = $question->getQuestions()->getId();
+        }
+
+        $questions = [];
+
+        foreach ($item->getItemsQuiz()->getQuestions() as $key => $question) {
+
+            if(in_array($question->getId(), $questionsAnswered)){
+                $item->getItemsQuiz()->removeQuestion($question);
+            }else{
+                $questions[$question->getId()] = $question;
+            }
+
+
+        }
+
+        $question = null;
+
+        if(current($questions) !=''){
+            $question = current($questions);
+        }
+
+        return $question;
+
+
+    }
+
 }
 
 

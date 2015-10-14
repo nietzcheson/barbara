@@ -18,19 +18,9 @@ class QuizDetailsUserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('value', 'textarea')
-            // ->add('options', 'entity', array(
-            //     'class' => 'MoocsyBundle:Options',
-            //     'query_builder' => function(EntityRepository $er) use($options){
-            //         return $er->createQueryBuilder('o')
-            //                ->where('o.questions = :question')
-            //                ->setParameter('question', $options['question_id'])
-            //         ;
-            //     },
-            //     'property' => 'options',
-            //     'expanded' => true,
-            //     'label' => $options['question_label']
-            // ))
+            ->add('value', 'textarea', array(
+                'label' => $options['question_label']
+            ))
         ;
     }
 
@@ -44,11 +34,9 @@ class QuizDetailsUserType extends AbstractType
         ));
 
         $resolver->setRequired(['question_label']);
-        $resolver->setRequired(['question_id']);
 
         $resolver->setAllowedTypes([
             'question_label' => 'string',
-            'question_id' => 'int',
         ]);
     }
 
