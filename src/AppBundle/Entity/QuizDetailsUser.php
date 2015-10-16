@@ -53,6 +53,19 @@ class QuizDetailsUser
     private $users;
 
     /**
+     * @var datetime
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    public function __construct()
+    {
+        $this->created = new \Datetime('now');
+        //$this->updated = new \Datetime('now');
+    }
+
+    /**
      * Get id
      *
      * @return integer
@@ -198,5 +211,28 @@ class QuizDetailsUser
     public function getQuizs()
     {
         return $this->quizs;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return QuizDetailsUser
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
     }
 }

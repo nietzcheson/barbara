@@ -29,7 +29,14 @@
                         <hr>
                         <ul class="list-group">
                             {% for question in daily %}
-                                <li class="list-group-item">{{ question.value }}</li>
+
+                                <li class="list-group-item">
+                                    <strong>{{ question.created|date('d-m-Y') }}</strong> |
+                                    <strong>{{ question.quizs.quiz }}</strong> |
+                                    <strong>{{ question.questions.question }}</strong>
+                                    <hr>
+                                    {{ question.value }}
+                                </li>
                             {% endfor %}
 
                         </ul>
