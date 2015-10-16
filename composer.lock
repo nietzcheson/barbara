@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/MoocsyBundle.git",
-                "reference": "701a43984b95dc5133f25fc49375aa43d8963591"
+                "reference": "395a1b05f46b5394863ec3d3b90bd8d6d47afc7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/701a43984b95dc5133f25fc49375aa43d8963591",
-                "reference": "701a43984b95dc5133f25fc49375aa43d8963591",
+                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/395a1b05f46b5394863ec3d3b90bd8d6d47afc7f",
+                "reference": "395a1b05f46b5394863ec3d3b90bd8d6d47afc7f",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "Mooc",
                 "artesanIO"
             ],
-            "time": "2015-10-14 20:22:44"
+            "time": "2015-10-15 22:46:56"
         },
         {
             "name": "doctrine/annotations",
@@ -1234,7 +1234,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/e9e9531c061f3a01a645bbaede112fbd768bb1f9",
+                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/a810c303c2fbec1078020f7786ea27387b4bf6ab",
                 "reference": "e9e9531c061f3a01a645bbaede112fbd768bb1f9",
                 "shasum": ""
             },
@@ -1827,7 +1827,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/37bcae173f2ca774ee125ea378690d192596aa29",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/cb92b179dddfb8a3f341d53bd27e088f24d9c2e5",
                 "reference": "37bcae173f2ca774ee125ea378690d192596aa29",
                 "shasum": ""
             },
@@ -3221,7 +3221,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/7e848fba8458347bd09132d36f45616d6dae2262",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/3510e0a2defc363fffafd2de726ee3a4a0931c8a",
                 "reference": "7e848fba8458347bd09132d36f45616d6dae2262",
                 "shasum": ""
             },
