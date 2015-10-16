@@ -69,10 +69,11 @@ class UserNotifications
         $this->viewed = 0;
     }
 
+
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -95,80 +96,11 @@ class UserNotifications
     /**
      * Get notifications
      *
-     * @return string
+     * @return string 
      */
     public function getNotifications()
     {
         return $this->notifications;
-    }
-
-    /**
-     * Set creator
-     *
-     * @param integer $creator
-     * @return UserNotifications
-     */
-    public function setCreator($creator)
-    {
-        $this->creator = $creator;
-
-        return $this;
-    }
-
-    /**
-     * Get creator
-     *
-     * @return integer
-     */
-    public function getCreator()
-    {
-        return $this->creator;
-    }
-
-    /**
-     * Set users
-     *
-     * @param integer $users
-     * @return UserNotifications
-     */
-    public function setUsers($users)
-    {
-        $this->users = $users;
-
-        return $this;
-    }
-
-    /**
-     * Get users
-     *
-     * @return integer
-     */
-    public function getUsers()
-    {
-        return $this->users;
-    }
-
-    /**
-     * Set courses
-     *
-     * @param integer $courses
-     * @return UserNotifications
-     */
-    public function setCourses($courses)
-    {
-        $this->courses = $courses;
-
-        return $this;
-    }
-
-    /**
-     * Get courses
-     *
-     * @return integer
-     */
-    public function getCourses()
-    {
-        return $this->courses;
     }
 
     /**
@@ -187,7 +119,7 @@ class UserNotifications
     /**
      * Get created
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getCreated()
     {
@@ -210,10 +142,79 @@ class UserNotifications
     /**
      * Get viewed
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getViewed()
     {
         return $this->viewed;
+    }
+
+    /**
+     * Set creator
+     *
+     * @param \ArtesanIO\ArtesanusBundle\Entity\User $creator
+     * @return UserNotifications
+     */
+    public function setCreator(\ArtesanIO\ArtesanusBundle\Entity\User $creator = null)
+    {
+        $this->creator = $creator;
+
+        return $this;
+    }
+
+    /**
+     * Get creator
+     *
+     * @return \ArtesanIO\ArtesanusBundle\Entity\User 
+     */
+    public function getCreator()
+    {
+        return $this->creator;
+    }
+
+    /**
+     * Set users
+     *
+     * @param \ArtesanIO\ArtesanusBundle\Entity\User $users
+     * @return UserNotifications
+     */
+    public function setUsers(\ArtesanIO\ArtesanusBundle\Entity\User $users = null)
+    {
+        $this->users = $users;
+
+        return $this;
+    }
+
+    /**
+     * Get users
+     *
+     * @return \ArtesanIO\ArtesanusBundle\Entity\User 
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * Set courses
+     *
+     * @param \ArtesanIO\MoocsyBundle\Entity\Courses $courses
+     * @return UserNotifications
+     */
+    public function setCourses(\ArtesanIO\MoocsyBundle\Entity\Courses $courses = null)
+    {
+        $this->courses = $courses;
+
+        return $this;
+    }
+
+    /**
+     * Get courses
+     *
+     * @return \ArtesanIO\MoocsyBundle\Entity\Courses 
+     */
+    public function getCourses()
+    {
+        return $this->courses;
     }
 }

@@ -51,7 +51,12 @@
                         <hr>
                         <ul class="list-group">
                             {% for notification in notifications %}
-                                <li class="list-group-item">{{ notification.notifications }}</li>
+                                <li class="list-group-item">
+                                    <strong>{{ notification.created|date('d-m-Y') }}</strong>
+                                        {{ notification.creator.name|default(notification.creator.username) }}
+                                    <hr>
+                                    {{ notification.notifications }}
+                                </li>
                             {% endfor %}
                         </ul>
                     </div>
