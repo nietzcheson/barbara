@@ -13,3 +13,8 @@ services:
         class: AppBundle\Form\UserNotificationsType
         tags:
             - { name: form.type, alias: barbara_users_notifications }
+
+    barbara.courses_notifications_type:
+        class: AppBundle\Form\CoursesNotificationsType
+        tags:
+            - { name: form.type, alias: barbara_courses_notifications_type }

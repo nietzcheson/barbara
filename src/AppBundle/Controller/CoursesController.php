@@ -88,11 +88,32 @@ class CoursesController extends Controller
             return $this->redirect($this->generateUrl('moocsy_admin_course', array('course' => $course->getSlug())));
         }
 
+        $coursesNotificationsManager = $this->get('barbara.courses_notifications_manager');
+        $coursesNotifications = $coursesNotificationsManager->create();
+
+        $coursesNotificationsForm = $this->createForm('barbara_courses_notifications_type', $coursesNotifications)->handleRequest($request);
+
+        if($coursesNotificationsForm->isValid()){
+
+            $coursesNotifications->setCourses($course);
+            $coursesNotifications->setCreator($this->getUser());
+
+            $coursesNotificationsManager->save($coursesNotifications);
+
+            $this->get('artesanus.flashers')->add('info','Notificación agregada');
+
+            return $this->redirect($this->generateUrl('moocsy_admin_course', array('course' => $course->getSlug())));
+        }
+
+        $coursesNotifications = $coursesNotificationsManager->findOneByCourses($course);
+
         return $this->render('MoocsyBundle:Courses:course.html.twig', array(
-            'course'                    => $course,
-            'courses_form'              => $coursesForm->createView(),
-            'course_user_form'          => $courseUserForm->createView(),
-            'course_attachment_form'    => $courseAttachmentsForm->createView()
+            'course'                        => $course,
+            'courses_form'                  => $coursesForm->createView(),
+            'course_user_form'              => $courseUserForm->createView(),
+            'course_attachment_form'        => $courseAttachmentsForm->createView(),
+            'courses_notifications_form'    => $coursesNotificationsForm->createView(),
+            'courses_nofitications'       => $coursesNotifications
         ));
     }
 

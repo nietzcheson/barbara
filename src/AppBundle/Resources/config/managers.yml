@@ -13,3 +13,9 @@ services:
         arguments:
             - @doctrine.orm.entity_manager
             - AppBundle\Entity\UserNotifications
+
+    barbara.courses_notifications_manager:
+        class: AppBundle\Model\CoursesNotificationsManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - AppBundle\Entity\CoursesNotifications
