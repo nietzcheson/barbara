@@ -42,6 +42,24 @@
   </div>
 </div>
 
+<div class="modal fade" id="notifications" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Notificaciones</h4>
+      </div>
+      <div class="modal-body">
+            {% for notification in notifications %}
+                <div class="alert alert-success"> {{ notification.notifications }} </div>
+            {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="col-lg-1-12 text-center">
     <div id="attachments">
         <div class="attachments">
@@ -60,6 +78,8 @@
                     {% else %}
                         <a class="list-group-item disabled">Diploma</a>
                     {% endif %}
+
+                    <a class="list-group-item" target="_blank" data-toggle="modal" data-target="#notifications">Notificaciones</a>
 
 
             </ul>

@@ -149,10 +149,14 @@ class CoursesController extends Controller
             return $this->redirect($this->generateUrl('moocsy_front_course', array('course' => $course->getSlug() )));
         }
 
+        $coursesNotificationsManager = $this->get('barbara.courses_notifications_manager');
+        $coursesNotifications = $coursesNotificationsManager->findOneByCourses($course);
+
         return $this->render('MoocsyBundle:Front:courses.html.twig', array(
             'course'                    => $courseUser,
             'modules_released'          => $modulesReleased,
-            'username_certificate_form' => $usernameCertificateForm->createView()
+            'username_certificate_form' => $usernameCertificateForm->createView(),
+            'notifications'             => $coursesNotifications
         ));
     }
 
