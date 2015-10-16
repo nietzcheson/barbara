@@ -55,7 +55,13 @@ moocsy_front_courses:
         type: courses
 
 moocsy_front_notifications:
+    path:     /asistence
+    defaults: { _controller: MoocsyBundle:Notifications:front, type: asistence }
+    requirements:
+        type: asistence
+
+moocsy_front_users_notifications:
     path:     /notifications
-    defaults: { _controller: MoocsyBundle:Notifications:front, type: notifications }
+    defaults: { _controller: MoocsyBundle:Notifications:userNotifications, type: notifications }
     requirements:
         type: notifications

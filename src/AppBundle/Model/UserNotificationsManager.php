@@ -87,6 +87,11 @@ class UserNotificationsManager extends ContainerAware
         return $this->repository->findNotificationsCourseUser($course, $user);
     }
 
+    public function findOneByUserNotifications($user)
+    {
+        return $this->repository->findBy(array('users' => $user));
+    }
+
 }
 
 

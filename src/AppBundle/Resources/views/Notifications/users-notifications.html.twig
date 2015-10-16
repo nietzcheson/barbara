@@ -1,0 +1,22 @@
+{% extends 'AppBundle::home-front.html.twig' %}
+
+{% block title_section %}
+
+Notificaciones
+
+{% endblock %}
+
+
+{% block moocsy %}
+    {% for notification in notifications %}
+        <div class="alert alert-success">
+            <strong>
+                {{ notification.created|date('d-m-Y') }}
+            </strong>
+            <p class="lead">
+
+                {{ notification.notifications }}
+            </p>
+        </div>
+    {% endfor %}
+{% endblock %}
