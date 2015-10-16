@@ -396,4 +396,29 @@ class CoursesController extends Controller
 
         return $this->redirect($this->generateUrl('moocsy_admin_courses'));
     }
+
+    public function userAction($course, $user)
+    {
+
+        $courseManager = $this->get('moocsy.courses_manager');
+        $course = $courseManager->findOneBySlug($course);
+
+        $userManager = $this->get('artesanus.user_manager');
+
+        $user = $userManager->find($user);
+
+        $courseUser = $courseManager->findCourseUser($course, $user);
+
+        $quizDetailsManager = $this->get('barbara.quiz_details_manager');
+
+        $questionsCourseUser = $quizDetailsManager->findQuestionsCourseUser($course->getId(), $user);
+
+        return $this->render('MoocsyBundle:Courses:course-user.html.twig', array(
+            'course'        => $course,
+            'module'        => $course->getModules()[0],
+            'course_user'   => $courseUser,
+            'daily'         => $questionsCourseUser
+        ));
+
+    }
 }

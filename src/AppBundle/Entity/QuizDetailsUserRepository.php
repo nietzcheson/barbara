@@ -32,4 +32,35 @@ class QuizDetailsUserRepository extends EntityRepository
 
     }
 
+
+    public function findQuestionsCourseUser($course, $user)
+    {
+        try {
+            return $this->getEntityManager()->createQuery(
+                'SELECT c FROM AppBundle:QuizDetailsUser c
+                 LEFT JOIN c.questions q
+                 LEFT JOIN q.itemsQuiz iq
+                 LEFT JOIN iq.items i
+                 LEFT JOIN i.modules m
+                 LEFT JOIN m.courses co
+                 WHERE c.users = :user
+                 AND q.itemsQuiz = iq.id
+                 AND iq.items = i.id
+                 AND i.modules = m.id
+                 AND m.courses = co.id
+                 AND co.id = :course
+                 ORDER BY c.id ASC
+                '
+            )
+            ->setParameter('user', $user)
+            ->setParameter('course', $course)
+            ->getResult();
+
+        } catch (\Doctrine\ORM\NoResultException $e) {
+            return null;
+        }
+
+    }
+
+
 }

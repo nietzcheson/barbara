@@ -1,0 +1,45 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+
+{% block artesanus_section_subtitle %} Cursos {% endblock %}
+
+{% block artesanus_section_body %}
+
+    <div class="col-lg-4">
+        <ul class="list-group">
+            <li class="list-group-item">Name: {{ course_user.users.name|default(course_user.users.username) }}</li>
+            <li class="list-group-item">Email: {{ course_user.users.email|default('') }}</li>
+            <li class="list-group-item">Last Login: {{ course_user.users.lastLogin|date('d-m-Y') }}</li>
+            <li class="list-group-item">Registered: {{ course_user.registered|date('d-m-Y') }}</li>
+            <li class="list-group-item">Certificate Freedom: {{ course_user.certificateFreedom|date('d-m-Y') }}</li>
+            <li class="list-group-item">Certificated: {{ course_user.certified|date('d-m-Y')|default('') }}</li>
+        </ul>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Daily</a></li>
+                  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Notifications</a></li>
+
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                        <hr>
+                        <ul class="list-group">
+                            {% for question in daily %}
+                                <li class="list-group-item">{{ question.value }}</li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

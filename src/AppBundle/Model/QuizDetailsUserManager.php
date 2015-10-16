@@ -184,6 +184,11 @@ class QuizDetailsUserManager extends ContainerAware
 
     }
 
+    public function findQuestionsCourseUser($course, $user)
+    {
+        return $this->repository->findQuestionsCourseUser($course, $user);
+    }
+
 }
 
 
