@@ -7,3 +7,9 @@ services:
             - @artesanus.user_manager
         calls:
             - [setSecurity, ['@security.context']]
+
+    barbara.users_notifications_manager:
+        class: AppBundle\Model\UserNotificationsManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - AppBundle\Entity\UserNotifications

@@ -397,7 +397,7 @@ class CoursesController extends Controller
         return $this->redirect($this->generateUrl('moocsy_admin_courses'));
     }
 
-    public function userAction($course, $user)
+    public function userAction($course, $user, Request $request)
     {
 
         $courseManager = $this->get('moocsy.courses_manager');
@@ -413,11 +413,31 @@ class CoursesController extends Controller
 
         $questionsCourseUser = $quizDetailsManager->findQuestionsCourseUser($course->getId(), $user);
 
+        $userNotificationsManager = $this->get('barbara.users_notifications_manager');
+        $userNotifications = $userNotificationsManager->create();
+        $userNotificationsForm = $this->createForm('barbara_users_notifications', $userNotifications)->handleRequest($request);
+
+        if($userNotificationsForm->isValid()){
+
+            $userNotifications->setCourses($course);
+            $userNotifications->setUsers($user);
+            $userNotifications->setCreator($this->getUser());
+
+            $userNotificationsManager->save($userNotifications);
+            $this->get('artesanus.flashers')->add('info','Notificación agregada');
+            return $this->redirect($this->generateUrl('moocsy_admin_course_user', array('course' => $course->getSlug(), 'user' => $user->getId() )));
+
+        }
+
+        $allNotifications = $userNotificationsManager->findNotificationsCourseUser($course, $user);
+
         return $this->render('MoocsyBundle:Courses:course-user.html.twig', array(
-            'course'        => $course,
-            'module'        => $course->getModules()[0],
-            'course_user'   => $courseUser,
-            'daily'         => $questionsCourseUser
+            'course'                    => $course,
+            'module'                    => $course->getModules()[0],
+            'course_user'               => $courseUser,
+            'daily'                     => $questionsCourseUser,
+            'user_notifications_form'   => $userNotificationsForm->createView(),
+            'notifications'             => $allNotifications
         ));
 
     }

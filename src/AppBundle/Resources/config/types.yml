@@ -8,3 +8,8 @@ services:
         class: AppBundle\Form\QuizDetailsUserType
         tags:
             - { name: form.type, alias: barbara_quiz_details_user_type }
+
+    barbara.users_notifications_type:
+        class: AppBundle\Form\UserNotificationsType
+        tags:
+            - { name: form.type, alias: barbara_users_notifications }
