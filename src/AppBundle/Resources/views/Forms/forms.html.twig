@@ -1,0 +1,20 @@
+{% macro btn_delete() %}
+
+    <td class="text-right">
+        <button type="button" class="btn btn-default delete-collection" onclick="deleteCollection(this);">
+            <span class="glyphicon glyphicon-trash"></span>
+        </button>
+    </td>
+
+{% endmacro %}
+
+{%- macro home_videos(video) -%}
+    <tr>
+        <td>{{ form_widget(video.title ) }}</td>
+        <td>{{ form_widget(video.description ) }}</td>
+        <td>{{ form_widget(video.video ) }}</td>
+        {% import _self as btn %}
+        {{ btn.btn_delete() }}
+    </tr>
+
+{%- endmacro -%}

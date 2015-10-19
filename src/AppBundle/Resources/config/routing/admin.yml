@@ -63,4 +63,3 @@ moocsy_admin_notifications:
 moocsy_admin_notifications_answer:
     path:     /notifications/answer/{id}
     defaults: { _controller: MoocsyBundle:Notifications:answer }
-    requirements:

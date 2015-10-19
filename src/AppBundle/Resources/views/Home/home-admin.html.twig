@@ -1,0 +1,50 @@
+{% extends 'MoocsyBundle::moocsy_admin.html.twig' %}
+
+{% import 'MoocsyBundle::Forms/forms.html.twig' as forms %}
+
+{% block artesanus_section_subtitle %} Home {% endblock %}
+
+{% block artesanus_section_body %}
+
+<div class="col-lg-4">
+    <form class="" action="" method="post">
+        {{ form_widget(home_form) }}
+
+        <button type="submit" class="btn btn-default">
+            Guardar
+        </button>
+    </form>
+</div>
+
+<div class="col-lg-8">
+    <form class="" action="" method="post">
+        {{ form_widget(home_videos_form._token) }}
+
+        <table class="table table-condensed">
+            <tbody class="collections" data-prototype="{{  forms.home_videos(home_videos_form.videos.vars.prototype)|e }}">
+                <tr>
+                    {% for video in home_videos_form.videos %}
+                        {{ forms.home_videos(video) }}
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-group btn-group-sm">
+            <button type="submit" class="btn btn-primary">
+                Guardar
+            </button>
+            <button type="button" class="btn btn-default add-collection">
+                <span class="glyphicon glyphicon-plus"></span> Agregar
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block artesanus_js %}
+
+<script src="{{ asset('bundles/moocsy/js/moocsy.js') }}" charset="utf-8"></script>
+
+{% endblock %}

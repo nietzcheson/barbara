@@ -8,3 +8,8 @@ services:
             - @twig
             - @moocsy.courses_manager
             - @moocsy.courses_users_manager
+
+    app.home_menu_admin.listener:
+        class: AppBundle\EventListener\HomeMenuAdminListener
+        tags:
+            - { name: kernel.event_listener, event: artesanus.navbar, method: onArtesanusNavBar }

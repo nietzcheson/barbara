@@ -18,3 +18,18 @@ services:
         class: AppBundle\Form\CoursesNotificationsType
         tags:
             - { name: form.type, alias: barbara_courses_notifications_type }
+
+    barbara.home_type:
+        class: AppBundle\Form\HomeType
+        tags:
+            - { name: form.type, alias: barbara_home_type }
+
+    barbara.videos_type:
+        class: AppBundle\Form\VideosType
+        tags:
+            - { name: form.type, alias: barbara_videos_type }
+
+    barbara.home_videos_type:
+        class: AppBundle\Form\HomeVideosType
+        tags:
+            - { name: form.type, alias: barbara_home_videos_type }

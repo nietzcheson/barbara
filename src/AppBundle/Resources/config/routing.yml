@@ -1,2 +1,6 @@
 moocsy:
     resource: "@MoocsyBundle/Resources/config/routing.yml"
+
+artesanus_home:
+    path:     /artesanus/home
+    defaults: { _controller: MoocsyBundle:Home:admin }

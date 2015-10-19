@@ -19,3 +19,9 @@ services:
         arguments:
             - @doctrine.orm.entity_manager
             - AppBundle\Entity\CoursesNotifications
+
+    barbara.home_manager:
+        class: AppBundle\Model\HomeManager
+        arguments:
+            - @doctrine.orm.entity_manager
+            - AppBundle\Entity\Home
