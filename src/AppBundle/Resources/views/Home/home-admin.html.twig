@@ -21,6 +21,16 @@
         {{ form_widget(home_videos_form._token) }}
 
         <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>
+                        Título
+                    </th>
+                    <th>
+                        
+                    </th>
+                </tr>
+            </thead>
             <tbody class="collections" data-prototype="{{  forms.home_videos(home_videos_form.videos.vars.prototype)|e }}">
                 <tr>
                     {% for video in home_videos_form.videos %}
