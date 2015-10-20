@@ -49,4 +49,14 @@ class HomeController extends Controller
         ));
     }
 
+    public function frontAction()
+    {
+        $homeManager = $this->get('barbara.home_manager');
+        $home = $homeManager->findHome();
+
+        return $this->render('MoocsyBundle:Home:home-front.html.twig', array(
+            'home' => $home
+        ));
+    }
+
 }

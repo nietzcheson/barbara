@@ -65,3 +65,9 @@ moocsy_front_users_notifications:
     defaults: { _controller: MoocsyBundle:Notifications:userNotifications, type: notifications }
     requirements:
         type: notifications
+
+moocsy_front_home:
+    path:     /home
+    defaults: { _controller: MoocsyBundle:Home:front, type: home }
+    requirements:
+        type: home

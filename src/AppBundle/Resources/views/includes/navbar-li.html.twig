@@ -1,4 +1,4 @@
-<li role="presentation" class="{% if app.request.attributes.get('_route') == 'cotizacion' %} active {% endif %}"><a href="#">Inicio</a></li>
+<li role="presentation" class="{% if app.request.attributes.get('_route') == 'moocsy_front_home' %} active {% endif %}"><a href="{{ path('moocsy_front_home') }}">Inicio</a></li>
 <li role="presentation" class="{% if app.request.attributes.get('_route') == 'artesanus_front_user_profile' %} active {% endif %}"><a href="{{ path('artesanus_front_user_profile') }}">Perfil</a></li>
 <li role="presentation" class="{% if app.request.attributes.get('_route') == 'moocsy_front_courses' %} active {% endif %}"><a href="{{ path('moocsy_front_courses') }}">Programas</a></li>
 <li role="presentation" class="{% if app.request.attributes.get('_route') == 'moocsy_front_users_notifications' %} active {% endif %}"><a href="{{ path('moocsy_front_users_notifications') }}">Notificaciones</a></li>

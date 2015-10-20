@@ -260,4 +260,14 @@ Program
   padding: 2px;
   border: 1px solid #ef552b; }
 
+.social-network {
+  width: 22%;
+  position: relative;
+  padding: 20px;
+  margin: auto; }
+
+.social-network li {
+  float: left;
+  position: relative; }
+
 /*# sourceMappingURL=app.css.map */
