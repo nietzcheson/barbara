@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/MoocsyBundle.git",
-                "reference": "395a1b05f46b5394863ec3d3b90bd8d6d47afc7f"
+                "reference": "1b43a34c16d2b76c7ad680d32e453909249f55c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/395a1b05f46b5394863ec3d3b90bd8d6d47afc7f",
-                "reference": "395a1b05f46b5394863ec3d3b90bd8d6d47afc7f",
+                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/1b43a34c16d2b76c7ad680d32e453909249f55c0",
+                "reference": "1b43a34c16d2b76c7ad680d32e453909249f55c0",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "Mooc",
                 "artesanIO"
             ],
-            "time": "2015-10-15 22:46:56"
+            "time": "2015-10-20 21:54:11"
         },
         {
             "name": "doctrine/annotations",
@@ -1126,7 +1126,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/9198c2f7668b9ee494959f8ff7f5f6e6f65379ca",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/f6b2ebd8c462494083bfea6c087f79da36503930",
                 "reference": "9198c2f7668b9ee494959f8ff7f5f6e6f65379ca",
                 "shasum": ""
             },
@@ -2824,7 +2824,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/4f79d95220349318292b8156410450b7fc4ad115",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/6f5d663a1a34b5116c69009895feb81fb37a8875",
                 "reference": "4f79d95220349318292b8156410450b7fc4ad115",
                 "shasum": ""
             },
@@ -3221,7 +3221,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/3510e0a2defc363fffafd2de726ee3a4a0931c8a",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/f5f69a3d198f8965ef05bc61f1e8c970918bd7d2",
                 "reference": "7e848fba8458347bd09132d36f45616d6dae2262",
                 "shasum": ""
             },

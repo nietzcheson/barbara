@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions
+    name="APIxmlServicio"
+    targetNamespace=":urn:APIxml"
+    xmlns:tns="urn:APIxml"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <types>
+    <xsd:schema targetNamespace=":urn:APIxml">
+     <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+     <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+    </types>
+
+    <message name="registrarRequest">
+      <part name="token" type="xsd:string" />
+      <part name="username" type="xsd:strign" />
+      <part name="email" type="xsd:string" />
+      <part name="sku" type="xsd:strign" />
+    </message>
+
+    <message name="registrarResponse">
+      <part name="return" type="xsd:string" />
+    </message>
+
+    <portType name="APIxmlPort">
+      <operation name="registrar">
+        <documentation>Registro de los usuarios a la Plataforma</documentation>
+        <input message="tns:registrarRequest"/>
+        <output message="tns:registrarResponse"/>
+      </operation>
+    </portType>
+
+    <binding name="APIxmlBinding" type="tns:APIxmlPort">
+      <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+      <operation name="registrar">
+        <soap:operation soapAction="urn:APIxml#registrar" style="rpc"/>
+            <input>
+                <soap:body use="encoded" namespace="urn:APIxml" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output>
+                <soap:body use="encoded" namespace="urn:APIxml" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+      </operation>
+    </binding>
+
+    <service name="APIxmlServicio">
+      <port name="APIxmlPort" binding="tns:APIxmlBinding">
+        <soap:address location="52.88.15.254/apis/xml"/>
+      </port>
+    </service>
+
+</definitions>
