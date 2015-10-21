@@ -52,7 +52,7 @@
 
     <service name="APIxmlServicio">
       <port name="APIxmlPort" binding="tns:APIxmlBinding">
-        <soap:address location="52.88.15.254/apis/xml"/>
+        <soap:address location="http://52.88.15.254/apis/xml"/>
       </port>
     </service>
 
