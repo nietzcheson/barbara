@@ -13,15 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/ArtesanusBundle.git",
-                "reference": "977edd442498373ae7f0c2d0c6a549159ef60c96"
+                "reference": "bc8fbb1ddba30da263949589afca34b20a31d159"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/ArtesanusBundle/zipball/977edd442498373ae7f0c2d0c6a549159ef60c96",
-                "reference": "977edd442498373ae7f0c2d0c6a549159ef60c96",
+                "url": "https://api.github.com/repos/ArtesanIO/ArtesanusBundle/zipball/bc8fbb1ddba30da263949589afca34b20a31d159",
+                "reference": "bc8fbb1ddba30da263949589afca34b20a31d159",
                 "shasum": ""
             },
             "require": {
+                "braincrafted/bootstrap-bundle": "^2.1",
                 "friendsofsymfony/user-bundle": "~2.0@dev",
                 "knplabs/knp-menu-bundle": "~2"
             },
@@ -55,7 +56,7 @@
                 "artesanIO",
                 "dashboard"
             ],
-            "time": "2015-10-09 16:49:22"
+            "time": "2015-10-23 21:05:34"
         },
         {
             "name": "artesan-io/moocsy-bundle",
@@ -105,6 +106,66 @@
                 "artesanIO"
             ],
             "time": "2015-10-20 21:54:11"
+        },
+        {
+            "name": "braincrafted/bootstrap-bundle",
+            "version": "2.1.x-dev",
+            "target-dir": "Braincrafted/Bundle/BootstrapBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/braincrafted/bootstrap-bundle.git",
+                "reference": "c301bae8ba91b1a6f1045919b16f9cb9b62c7e7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/braincrafted/bootstrap-bundle/zipball/c301bae8ba91b1a6f1045919b16f9cb9b62c7e7b",
+                "reference": "c301bae8ba91b1a6f1045919b16f9cb9b62c7e7b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/console": "~2.3",
+                "symfony/finder": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
+            },
+            "require-dev": {
+                "knplabs/knp-menu": "~2.0@alpha",
+                "knplabs/knp-menu-bundle": "~2.0@alpha",
+                "knplabs/knp-paginator-bundle": "dev-master",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/assetic-bundle": "~2.3"
+            },
+            "suggest": {
+                "knplabs/knp-menu": "Required to use KnpMenuBundle.",
+                "knplabs/knp-menu-bundle": "BraincraftedBootstrapBundle styles the menus provided by KnpMenuBundle.",
+                "knplabs/knp-paginator-bundle": "BraincraftedBootstrapBundle styles the pagination provided by KnpPaginatorBundle.",
+                "twbs/bootstrap": "Twitter Bootstrap provides the assets (images, CSS and JS)"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Braincrafted\\Bundle\\BootstrapBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@eckerstorfer.co",
+                    "homepage": "http://florian.ec"
+                }
+            ],
+            "description": "BraincraftedBootstrapBundle integrates Bootstrap into Symfony2 by providing templates, Twig extensions, services and commands.",
+            "keywords": [
+                "bootstrap"
+            ],
+            "time": "2015-03-06 12:14:13"
         },
         {
             "name": "doctrine/annotations",
@@ -1770,7 +1831,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/f8c6b24a846e3713899f02e72604a78d80bb1b37",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/a07920b10a3b888abe7c47c7aecf56f69553f707",
                 "reference": "f8c6b24a846e3713899f02e72604a78d80bb1b37",
                 "shasum": ""
             },
@@ -3221,7 +3282,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/f5f69a3d198f8965ef05bc61f1e8c970918bd7d2",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/86b99ab64a3fe8e0ea7d8c60880cdb4033c6b265",
                 "reference": "7e848fba8458347bd09132d36f45616d6dae2262",
                 "shasum": ""
             },
@@ -3342,7 +3403,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/112c5112609ff74df6e6a1a7375efc30f442c0db",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/66e2275527ccd4e70dc4713a5f1dc8bca3fc7f39",
                 "reference": "112c5112609ff74df6e6a1a7375efc30f442c0db",
                 "shasum": ""
             },
