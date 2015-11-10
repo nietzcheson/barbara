@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/MoocsyBundle.git",
-                "reference": "87b267697a9147f468f5888523036d65b8cec2fd"
+                "reference": "257895fe936e0fc03d8af9e58fed8dc8bc35755b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/87b267697a9147f468f5888523036d65b8cec2fd",
-                "reference": "87b267697a9147f468f5888523036d65b8cec2fd",
+                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/257895fe936e0fc03d8af9e58fed8dc8bc35755b",
+                "reference": "257895fe936e0fc03d8af9e58fed8dc8bc35755b",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "Mooc",
                 "artesanIO"
             ],
-            "time": "2015-11-04 22:27:30"
+            "time": "2015-11-10 14:11:00"
         },
         {
             "name": "doctrine/annotations",
@@ -728,12 +728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/097e7ba84f64a427e55008117ef2bb94096731dc",
-                "reference": "097e7ba84f64a427e55008117ef2bb94096731dc",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
@@ -745,7 +745,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -787,7 +787,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-10-07 18:00:26"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "doctrine/lexer",
@@ -1030,12 +1030,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "5a91b2475cd9a7a41d02615232eb4d1f18d4ae2c"
+                "reference": "cd5fb1c262e1734366e77688b011a0f0422ce06d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5a91b2475cd9a7a41d02615232eb4d1f18d4ae2c",
-                "reference": "5a91b2475cd9a7a41d02615232eb4d1f18d4ae2c",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/cd5fb1c262e1734366e77688b011a0f0422ce06d",
+                "reference": "cd5fb1c262e1734366e77688b011a0f0422ce06d",
                 "shasum": ""
             },
             "require": {
@@ -1072,7 +1072,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-11-04 14:05:31"
+            "time": "2015-11-09 08:00:48"
         },
         {
             "name": "hautelook/alice-bundle",
@@ -1080,18 +1080,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hautelook/AliceBundle.git",
-                "reference": "c4d97c842dc11a5c7bc588d2cd5d9d4bd6ffa821"
+                "reference": "9407348551767dda2ba005ef7fe5dc29e6b750c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/c4d97c842dc11a5c7bc588d2cd5d9d4bd6ffa821",
-                "reference": "c4d97c842dc11a5c7bc588d2cd5d9d4bd6ffa821",
+                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/9407348551767dda2ba005ef7fe5dc29e6b750c1",
+                "reference": "9407348551767dda2ba005ef7fe5dc29e6b750c1",
                 "shasum": ""
             },
             "require": {
                 "nelmio/alice": "~2.1",
                 "php": ">=5.4.0",
-                "symfony/finder": "^2.7"
+                "symfony/finder": "^2.7|~3.0"
             },
             "require-dev": {
                 "doctrine/doctrine-bundle": "~1.2",
@@ -1103,12 +1103,11 @@
                 "doctrine/phpcr-odm": "^1.2",
                 "jackalope/jackalope-doctrine-dbal": "^1.2",
                 "sllh/php-cs-fixer-styleci-bridge": "~1.0",
-                "symfony/console": "~2.3",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/phpunit-bridge": "^2.7.4",
-                "symfony/validator": "~2.3",
-                "symfony/yaml": "~2.3",
-                "theofidry/psysh-bundle": "^1.1.2"
+                "symfony/console": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/phpunit-bridge": "^2.7.4|~3.0",
+                "symfony/validator": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
             },
             "suggest": {
                 "doctrine/data-fixtures": "To use Doctrine fixtures loader",
@@ -1122,6 +1121,11 @@
                 "theofidry/alice-bundle-extension": "Behat extension for HautelookAliceBundle"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Hautelook\\AliceBundle\\": "src"
@@ -1150,7 +1154,7 @@
                 "orm",
                 "symfony"
             ],
-            "time": "2015-10-29 20:57:57"
+            "time": "2015-11-09 19:30:30"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1684,24 +1688,24 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v5.2.14",
+            "version": "5.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "e774bc9152de85547336e22b8926189e582ece95"
+                "reference": "14e8ef03eb90b458506b31741ddca9a15f4c6818"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/e774bc9152de85547336e22b8926189e582ece95",
-                "reference": "e774bc9152de85547336e22b8926189e582ece95",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a139b9636893e09c7599a97117247767eb150611",
+                "reference": "14e8ef03eb90b458506b31741ddca9a15f4c6818",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.0.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpdocumentor/phpdocumentor": "*",
-                "phpunit/phpunit": "4.7.*"
+                "phpdocumentor/phpdocumentor": "2.*",
+                "phpunit/phpunit": "4.*"
             },
             "suggest": {
                 "league/oauth2-client": "Needed for XOAUTH2 authentication",
@@ -1709,15 +1713,9 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "class.phpmailer.php",
-                    "class.phpmaileroauth.php",
-                    "class.phpmaileroauthgoogle.php",
-                    "class.smtp.php",
-                    "class.pop3.php",
-                    "extras/EasyPeasyICS.php",
-                    "extras/ntlm_sasl_client.php"
-                ]
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1741,7 +1739,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2015-11-01 10:15:28"
+            "time": "2015-11-10 12:45:13"
         },
         {
             "name": "psr/log",
@@ -1910,16 +1908,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "7735fd97ff7303d9df776b8dbc970f949399abc9"
+                "reference": "21696b0daa731064c23cfb694c60a2584a7b6e93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/7735fd97ff7303d9df776b8dbc970f949399abc9",
-                "reference": "7735fd97ff7303d9df776b8dbc970f949399abc9",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/21696b0daa731064c23cfb694c60a2584a7b6e93",
+                "reference": "21696b0daa731064c23cfb694c60a2584a7b6e93",
                 "shasum": ""
             },
             "require": {
-                "symfony/console": "~2.0"
+                "symfony/console": "~2.0|~3.0"
             },
             "bin": [
                 "security-checker"
@@ -1946,7 +1944,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2015-08-11 12:11:25"
+            "time": "2015-11-07 08:07:40"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2249,12 +2247,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "814c2727defdd8922851e7450626e18530192f43"
+                "reference": "6f1d5068241039d4b844d792e24b257e5653cfc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/814c2727defdd8922851e7450626e18530192f43",
-                "reference": "814c2727defdd8922851e7450626e18530192f43",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/6f1d5068241039d4b844d792e24b257e5653cfc7",
+                "reference": "6f1d5068241039d4b844d792e24b257e5653cfc7",
                 "shasum": ""
             },
             "require": {
@@ -2365,7 +2363,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-11-05 13:42:58"
+            "time": "2015-11-09 16:22:45"
         },
         {
             "name": "twig/twig",
