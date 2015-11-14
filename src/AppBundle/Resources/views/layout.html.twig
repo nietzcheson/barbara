@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Barbara Castro | Elearning</title>
+        <link rel="stylesheet" href="{{ asset('bower/bootstrap/dist/css/bootstrap.min.css') }}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{{ asset('bower/alertifyjs/dist/css/alertify.css') }}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{{ asset('bower/alertifyjs/dist/css/alertify-bootstrap.css') }}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{{ asset('bundles/artesanus/css/app.css') }}" media="screen" title="no title" charset="utf-8">
+        {% block artesanus_css %}{% endblock %}
+    </head>
+    <body>
+        {% block artesanus %}{% endblock %}
+
+        <div id="wrap-artesanus-body">
+
+            {{ flashers() }}
+
+            {% block artesanus_section_body %}
+                <div id="wrap-artesanus-security">
+                    {{ block('fos_user_content')}}
+                </div>
+            {% endblock %}
+        </div>
+
+        <script src="{{ asset('bower/jquery/dist/jquery.min.js') }}" charset="utf-8"></script>
+        <script src="{{ asset('bower/bootstrap/dist/js/bootstrap.min.js') }}" charset="utf-8"></script>
+        <script src="{{ asset('bower/alertifyjs/dist/js/alertify.js') }}" charset="utf-8"></script>
+        <script src="//cdn.ckeditor.com/4.5.4/basic/ckeditor.js"></script>
+        <script src="{{ asset('bundles/artesanus/js/app.js') }}" charset="utf-8"></script>
+
+        {% block artesanus_js %}{% endblock %}
+
+        </body>
+</html>

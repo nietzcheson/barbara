@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/ArtesanusBundle.git",
-                "reference": "6ab213ef9223c39920f2b428dc46965d3f3d78aa"
+                "reference": "b262e46691f99f270cd16d311192f19d8ae28370"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/ArtesanusBundle/zipball/6ab213ef9223c39920f2b428dc46965d3f3d78aa",
-                "reference": "6ab213ef9223c39920f2b428dc46965d3f3d78aa",
+                "url": "https://api.github.com/repos/ArtesanIO/ArtesanusBundle/zipball/b262e46691f99f270cd16d311192f19d8ae28370",
+                "reference": "b262e46691f99f270cd16d311192f19d8ae28370",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "artesanIO",
                 "dashboard"
             ],
-            "time": "2015-11-05 00:39:01"
+            "time": "2015-11-14 01:55:03"
         },
         {
             "name": "artesan-io/moocsy-bundle",
@@ -1166,7 +1166,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/f7b677a5f9bfd8bf5f165a0ff96ce7426b870312",
+                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/d7ce7f06136109e81d1cb9d57066c4d4a99cf1cc",
                 "reference": "f7b677a5f9bfd8bf5f165a0ff96ce7426b870312",
                 "shasum": ""
             },
@@ -1335,7 +1335,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/a07920b10a3b888abe7c47c7aecf56f69553f707",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/675a8f87d972713b1abec06e5ed63043e7fd5aec",
                 "reference": "a07920b10a3b888abe7c47c7aecf56f69553f707",
                 "shasum": ""
             },
@@ -1392,7 +1392,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/63c1f0dac8e144a6f9b4b139da5202cd12e0891d",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/9928f7c4ad98b234e3559d1049abd13387f86db5",
                 "reference": "63c1f0dac8e144a6f9b4b139da5202cd12e0891d",
                 "shasum": ""
             },
@@ -1470,7 +1470,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/magephp/magallanes/zipball/848fc76d47362dd205819eff8f88c3c66ad8d9ba",
+                "url": "https://api.github.com/repos/magephp/magallanes/zipball/c017720bfd927b190d6d49940eb372e3d2cf9f9c",
                 "reference": "848fc76d47362dd205819eff8f88c3c66ad8d9ba",
                 "shasum": ""
             },
@@ -1696,7 +1696,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a139b9636893e09c7599a97117247767eb150611",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/428949a697f0aa28746be6540cefc644d9cc882e",
                 "reference": "14e8ef03eb90b458506b31741ddca9a15f4c6818",
                 "shasum": ""
             },
@@ -2079,7 +2079,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/b9307832598946576da2c3c536f920fd9f268a71",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/201fec36b7d80e8c83b40b5a1dc6205fa31e531e",
                 "reference": "b9307832598946576da2c3c536f920fd9f268a71",
                 "shasum": ""
             },
@@ -2251,7 +2251,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/6f1d5068241039d4b844d792e24b257e5653cfc7",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/0bd8b58d9bad5c458009e3230bb9d0cb5a3080e1",
                 "reference": "6f1d5068241039d4b844d792e24b257e5653cfc7",
                 "shasum": ""
             },
