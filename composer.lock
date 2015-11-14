@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/ArtesanusBundle.git",
-                "reference": "641a47dbe5b101ffb8a69495445dc3c124f7649b"
+                "reference": "393a7c23263e439d57c911d4fd79df9160656850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/ArtesanusBundle/zipball/641a47dbe5b101ffb8a69495445dc3c124f7649b",
-                "reference": "641a47dbe5b101ffb8a69495445dc3c124f7649b",
+                "url": "https://api.github.com/repos/ArtesanIO/ArtesanusBundle/zipball/393a7c23263e439d57c911d4fd79df9160656850",
+                "reference": "393a7c23263e439d57c911d4fd79df9160656850",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "artesanIO",
                 "dashboard"
             ],
-            "time": "2015-11-14 16:41:30"
+            "time": "2015-11-14 17:06:56"
         },
         {
             "name": "artesan-io/moocsy-bundle",
