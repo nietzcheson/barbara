@@ -468,4 +468,17 @@ class CoursesController extends Controller
         ));
 
     }
+
+    public function notiticationsDeleteAction($id)
+    {
+        $coursesNotificationsManager = $this->get('barbara.courses_notifications_manager');
+        $coursesNotifications = $coursesNotificationsManager->findOneBy(array('id' => $id));
+
+        $course = $coursesNotifications->getCourses();
+
+        $coursesNotificationsManager->remove($coursesNotifications);
+        $this->get('artesanus.flashers')->add('warning','Notificación removida');
+        return $this->redirect($this->generateUrl('moocsy_admin_course', array('course' => $course->getSlug())));
+
+    }
 }

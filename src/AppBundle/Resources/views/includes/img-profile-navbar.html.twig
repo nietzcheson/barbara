@@ -1,1 +1,5 @@
-<img src="{{ asset('uploads/profiles/') }}{{ app.user.path }}" class="img-profile img-profile-navbar" />
+{% if app.user.path !="" %}
+    <img src="{{ asset('uploads/profiles/') }}{{ app.user.path }}" class="img-profile img-profile-navbar" />
+{% else %}
+    <img src="{{ asset('img/avatar.png') }}" class="img-profile img-profile-navbar" />
+{% endif %}

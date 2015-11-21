@@ -92,6 +92,17 @@ class CoursesNotificationsManager extends ContainerAware
         return $this->repository->findBy(array('courses' => $course));
     }
 
+    public function findOneBy($array = array())
+    {
+        return $this->repository->findOneBy($array);
+    }
+
+    public function remove($model)
+    {
+        $this->em->remove($model);
+        $this->em->flush();
+    }
+
 }
 
 

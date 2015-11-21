@@ -71,3 +71,9 @@ moocsy_front_home:
     defaults: { _controller: MoocsyBundle:Home:front, type: home }
     requirements:
         type: home
+
+courses_notifications_delete:
+    path:     /courses/notifications-delete/{id}
+    defaults: { _controller: MoocsyBundle:Courses:notiticationsDelete, type: notificationsDelete }
+    requirements:
+        type: notificationsDelete

@@ -93,6 +93,16 @@ class NotificationsController extends Controller
         return $this->render('MoocsyBundle:Notifications:users-notifications.html.twig', array(
             'notifications' => $userNotifications
         ));
+    }
+
+    public function userNotificationsDeleteAction($id)
+    {
+        $userNotificationsManager = $this->get('barbara.users_notifications_manager');
+        $userNotifications = $userNotificationsManager->findOneByUserNotifications($this->getUser());
+
+        return $this->render('MoocsyBundle:Notifications:users-notifications.html.twig', array(
+            'notifications' => $userNotifications
+        ));
 
     }
 }
