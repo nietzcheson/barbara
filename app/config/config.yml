@@ -81,3 +81,10 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+artesanus:
+    cartero:
+        subject: Barbara Castro
+        from:
+            email: no-reply@barbaracastro.com.mx
+            host: barbaracastro.com.mx
