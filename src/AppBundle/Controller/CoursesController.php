@@ -24,7 +24,7 @@ class CoursesController extends Controller
         $coursesForm = $this->createForm('moocsy_courses_type', $courses)->handleRequest($request);
 
         if($coursesForm->isValid()){
-            $courses->upload();
+
             $coursesManager->save($courses);
 
             $this->get('artesanus.flashers')->add('info','Se ha creado un nuevo curso');
@@ -50,8 +50,6 @@ class CoursesController extends Controller
         $courseAttachmentsOriginals = $coursesManager->courseAttachmentsOriginals($course);
 
         if($coursesForm->isValid()){
-
-            $course->upload();
 
             if($course->getCoursesCovers()){
                 $course->getCoursesCovers()->setCourses($course);
@@ -81,7 +79,7 @@ class CoursesController extends Controller
         if($courseAttachmentsForm->isValid()){
 
             foreach($course->getAttachments() as $attachment){
-                $attachment->upload();
+
                 $attachment->setCourses($course);
             }
 
@@ -199,7 +197,8 @@ class CoursesController extends Controller
         $html = $this->renderView('AppBundle::Courses/certificate.html.twig', array(
             'nombre' => $courseUser->getUsernameCertificate(),
             'fecha'  => $courseUser->getCertified(),
-            'curso'  => $courseUser->getCourses()->getCourse()
+            'curso'  => $courseUser->getCourses()->getCourse(),
+            'certificate' => $course->getCertificate()
         ));
 
         //return $html;

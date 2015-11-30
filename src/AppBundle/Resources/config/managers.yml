@@ -4,7 +4,7 @@ services:
         arguments:
             - @doctrine.orm.entity_manager
             - AppBundle\Entity\QuizDetailsUser
-            - @artesanus.user_manager
+            - @fos_user.user_manager
         calls:
             - [setSecurity, ['@security.context']]
 

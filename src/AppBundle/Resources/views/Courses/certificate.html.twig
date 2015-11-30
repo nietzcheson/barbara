@@ -9,7 +9,7 @@
         height: 702px;
         float: left;
         position: absolute;
-        background-image: url("{{ app.request.getSchemeAndHttpHost() }}{{ asset('uploads/courses/certificades/diploma.png') }}");
+        background-image: url("{{ app.request.getSchemeAndHttpHost() }}{{ asset('uploads/') }}{{ certificate.categories.slug }}/{{ certificate.path }}");
     }
     #nombre{
         width: 100%;

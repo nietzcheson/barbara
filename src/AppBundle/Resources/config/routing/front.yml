@@ -42,12 +42,6 @@ moocsy_front_items_video:
     requirements:
         type: video
 
-# moocsy_front_profile:
-#     path:     /profile
-#     defaults: { _controller: MoocsyBundle:Profile:profile, type: profile }
-#     requirements:
-#         type: profile
-
 moocsy_front_courses:
     path:     /courses
     defaults: { _controller: MoocsyBundle:Courses:coursesProfile, type: courses }
@@ -77,3 +71,7 @@ courses_notifications_delete:
     defaults: { _controller: MoocsyBundle:Courses:notiticationsDelete, type: notificationsDelete }
     requirements:
         type: notificationsDelete
+
+app_certificate_download:
+    path:     /courses/{course}/certificate
+    defaults: { _controller: MoocsyBundle:Courses:certificateDownload }

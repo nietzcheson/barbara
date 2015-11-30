@@ -2,7 +2,7 @@
 
 namespace AppBundle\Model;
 
-use ArtesanIO\ArtesanusBundle\Model\UserManager;
+use FOS\UserBundle\Model\UserManager;
 use ArtesanIO\MoocsyBundle\Event\MoocsyEvents;
 use ArtesanIO\MoocsyBundle\Event\ItemsEvent;
 use Doctrine\ORM\EntityManager;

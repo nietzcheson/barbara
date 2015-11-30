@@ -66,7 +66,7 @@
             {% if course.courses.attachments|length != 0 %}
             <ul class="list-group">
                 {% for attachment in course.courses.attachments %}
-                    <a href="{{ asset('uploads/courses/attachments/') }}{{ attachment.path }}" class="list-group-item" target="_blank">{{ attachment.attachment }}</a>
+                    <a href="{{ asset('uploads') }}/{{ attachment.file.categories.slug|default() }}/{{ attachment.file.path|default() }}" class="list-group-item" target="_blank">{{ attachment.attachment }}</a>
                 {% endfor %}
 
                     {% if 'now'|date('d-m-Y') >= course.certificateFreedom|date('d-m-Y') %}
