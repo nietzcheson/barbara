@@ -1,6 +1,6 @@
 {% extends 'MoocsyBundle::moocsy-front-module.html.twig' %}
 
 {% block moocsy_items %}
-    <embed src="{{ asset('uploads/documents/') }}{{item.itemsFile.path}}#toolbar=0" width="100%" height="500">
+    <embed src="{{ asset('uploads/') }}{{ item.itemsFile.files.categories.slug }}/{{ item.itemsFile.files.path }}#toolbar=0" width="100%" height="500">
     {% include 'MoocsyBundle::Front/includes/items-description.html.twig'%}
 {% endblock %}

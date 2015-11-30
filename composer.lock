@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ArtesanIO/MoocsyBundle.git",
-                "reference": "def6ad21819b4b57bbf2e86b4886bdea0bbf280c"
+                "reference": "45602fd36d272fdd9f1d58a82416acbcb08daccd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/def6ad21819b4b57bbf2e86b4886bdea0bbf280c",
-                "reference": "def6ad21819b4b57bbf2e86b4886bdea0bbf280c",
+                "url": "https://api.github.com/repos/ArtesanIO/MoocsyBundle/zipball/45602fd36d272fdd9f1d58a82416acbcb08daccd",
+                "reference": "45602fd36d272fdd9f1d58a82416acbcb08daccd",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 "Mooc",
                 "artesanIO"
             ],
-            "time": "2015-11-30 21:34:12"
+            "time": "2015-11-30 23:08:21"
         },
         {
             "name": "doctrine/annotations",
